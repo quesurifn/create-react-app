@@ -84,11 +84,44 @@ nav ul li a {
   font-size: 30px;
 }
 footer {
-  background-color:#38435A !important;
+  background-color:#0F346C!important;
   position: absolute;
   bottom: 0;
   width: 100%;
 }
+.email  div {
+  display: flex;
+}
+.email input:focus {
+  border-bottom:none !important;
+  box-shadow: none !important;
+}
+.email input {
+  color: white;
+  background-color:white;
+  outline: none;
+  border-bottom:none;
+  height:50px;
+  border-radius: 6px 0 0 6px;
+  text-align: center;
+  color:#363636;
+  width:200px;
+  display: inline;
+}
+.email button {
+  background: #CACBD4;
+  display: inline;
+  border: none;
+  outline: none;
+  height: 50px;
+  width:60px;
+  color:white;
+  border-radius: 0 6px 6px 0;
+}
+.email button:hover {
+  background-color: #aeafb2;
+}
+
 @media screen and (max-width: 722px) {
   .hero h1 {
     font-size: 25px;
