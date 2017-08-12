@@ -10,7 +10,7 @@ export class Header extends Component {
       <div className='row'>
           <div className='col s12'>
 
-            <Navbar brand='' left fixed >
+            <Navbar brand='Blue Apron' left fixed >
                 <NavItem>On The Menu</NavItem>
                 <NavItem>Pricing</NavItem>
                 <NavItem>Our Vision</NavItem>

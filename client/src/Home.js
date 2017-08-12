@@ -4,15 +4,10 @@ import './App.css';
 
 import {connect} from 'react-redux'
 import Background from './images/food.jpg'
+import Logo from './images/logo.svg'
 
 import {Button} from 'react-materialize'
 
-@connect((store) => {
-  console.log('store',store)
-  return {
-
-  }
-})
 export class Home extends Component {
   render() {
     var sectionStyle = {
@@ -28,7 +23,6 @@ export class Home extends Component {
       alignItems: 'center',
       flexDirection: 'column'
     };
-  
     return (
       <div className="App">
         <div className="hero" style={sectionStyle} >
