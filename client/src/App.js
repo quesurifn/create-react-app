@@ -1,29 +1,16 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import { Route, Link, Switch } from 'react-router-dom'
+import {Home} from './Home'
+import {NotFound} from './NotFound'
 
 
-import {connect} from 'react-redux'
-
-
-@connect((store) => {
-  console.log('store',store)
-  return {
-
-  }
-})
-export class App extends Component {
-
-
-
-  render() {
-  
-    return (
-      <div className="App">
-         
-      
-        </div>
-    );
-  }
-}
-
-
+export const App = () => (
+  <div>
+    <main>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route  component={NotFound} />
+      </Switch>
+    </main>
+  </div>
+)
