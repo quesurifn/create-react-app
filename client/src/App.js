@@ -4,6 +4,7 @@ import {Home} from './Home'
 import {NotFound} from './NotFound'
 
 import {Header} from './Header'
+import {Foot} from './Footer'
 
 
 export const App = () => (
@@ -19,5 +20,9 @@ export const App = () => (
         <Route  component={NotFound} />
       </Switch>
     </main>
+
+
+    <Foot />
+
   </div>
 )

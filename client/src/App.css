@@ -83,7 +83,12 @@ nav ul li a {
 .notfound h1 {
   font-size: 30px;
 }
-
+footer {
+  background-color:#38435A !important;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 @media screen and (max-width: 722px) {
   .hero h1 {
     font-size: 25px;

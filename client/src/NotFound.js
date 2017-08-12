@@ -2,15 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import {Redirect} from 'react-router-dom'
 
-import {connect} from 'react-redux'
-
-
-@connect((store) => {
-  console.log('store',store)
-  return {
-
-  }
-})
 export class NotFound extends Component {
     componentDidMount() {
         setTimeout(() => {
