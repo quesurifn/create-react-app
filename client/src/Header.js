@@ -4,6 +4,14 @@ import {Navbar, NavItem} from 'react-materialize'
 
 
 export class Header extends Component {
+    constructor() {
+        super()
+        this.hideBanner = this.hideBanner.bind(this);
+    }
+
+    hideBanner() {
+        this.refs.banner.display = "none"
+    }
   render() {
   
     return (
@@ -17,6 +25,10 @@ export class Header extends Component {
                 <NavItem>Wine</NavItem>
                 <NavItem>Market</NavItem>
             </Navbar>
+
+            <div className="banner" refs="banner">
+                <p onClick={this.hideBanner} className="exit">X</p>
+            </div> 
         </div>
       </div>
     );

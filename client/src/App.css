@@ -121,6 +121,23 @@ footer {
 .email button:hover {
   background-color: #aeafb2;
 }
+.banner {
+  display: none;
+  background-color:#3AC25B;
+  text-align: center;
+  position: relative;
+}
+.exit {
+  font-weight: 200;
+  color:white;
+  font-size: 40px;
+  position: absolute;
+  right: 10px;
+}
+
+.exit:hover {
+  color: gray;
+}
 
 @media screen and (max-width: 722px) {
   .hero h1 {

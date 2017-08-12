@@ -17,6 +17,7 @@ export class Foot extends Component {
         axios.post('/api/email', { email: this.refs.email.value})
             .then((response) => {
                 console.log('saved successfully')
+                this.refs.banner.display = "block";
             })
             .catch((err) => {
                 console.log('Not Saved Successfully')

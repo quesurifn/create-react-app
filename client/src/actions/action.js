@@ -6,14 +6,3 @@ export function setFaceBookToken(token) {
         payload: token
     }
 }
-export function setTwitterUsername(username) {
-    return {
-        type: "TWITTERNAME",
-        payload: username
-    }
-}
-export function refresh() {
-    return {
-        type: "REFRESH"
-    }
-}
