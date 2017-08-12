@@ -1,18 +1,43 @@
 import React, { Component } from 'react';
+import FacebookLogin from 'react-facebook-login';
 import './App.css';
 
 import {connect} from 'react-redux'
-import Background from './images/food.jpg'
-import Logo from './images/logo.svg'
+import {setFaceBookToken} from './actions/action'
 
+@connect((store) => {
+  console.log('store',store)
+  return {
+    fbkey: store.reducer.fbkey,
+    twittername: store.reducer.twittername
+  }
+})
 export class StepOne extends Component {
   render() {
+  
+  
+  
+    const responseFacebook = (response) => {
+      console.log(response);
+      let facebook = document.querySelector('.facebook')
+      facebook.style.display = 'inline'
+      this.props.dispatch(setFaceBookToken(response.accessToken))
+    }
     
     return (
-      <div className="App">
+      <div>
         
+        <input ref="loginEmail" type="email" />
+        <input ref="loginPassword" type="passowrd" /> 
+
+        <hr />
+
         
-      
+      <FacebookLogin
+        appId="269243040241559"
+        autoLoad={true}
+        fields="name,email,picture"
+        callback={responseFacebook} />
       </div>
     );
   }

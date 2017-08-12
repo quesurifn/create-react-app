@@ -14,7 +14,6 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.set('views', __dirname + '/views');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -54,7 +53,6 @@ app.use(function(err, req, res, next) {
   console.error(err)
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
 });
 
 module.exports = app;

@@ -5,7 +5,7 @@ import {NotFound} from './NotFound'
 
 import {Header} from './Header'
 import {Foot} from './Footer'
-
+import {StepOne} from './StepOne'
 
 export const App = () => (
   <div>
@@ -17,6 +17,7 @@ export const App = () => (
     <main>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/stepOne" component={StepOne} />
         <Route  component={NotFound} />
       </Switch>
     </main>
