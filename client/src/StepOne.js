@@ -15,12 +15,9 @@ import {setFaceBookToken} from './actions/action'
 export class StepOne extends Component {
   render() {
   
-  
-  
+
     const responseFacebook = (response) => {
       console.log(response);
-      let facebook = document.querySelector('.facebook')
-      facebook.style.display = 'inline'
       this.props.dispatch(setFaceBookToken(response.accessToken))
     }
     
