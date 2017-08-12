@@ -1,0 +1,85 @@
+
+  // Configure glob patterns for excluding files and folders.
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+  },
+
+  // Configure file associations to languages (e.g. "*.extension": "html"). These have precedence over the default associations of the languages installed.
+  "files.associations": {},
+
+  // The default character set encoding to use when reading and writing files.
+  "files.encoding": "utf8",
+
+  // When enabled, will attempt to guess the character set encoding when opening files
+  "files.autoGuessEncoding": false,
+
+  // The default end of line character. Use \n for LF and \r\n for CRLF.
+  "files.eol": "\n",
+
+  // When enabled, will trim trailing whitespace when saving a file.
+  "files.trimTrailingWhitespace": false,
+
+  // When enabled, insert a final new line at the end of the file when saving it.
+  "files.insertFinalNewline": false,
+
+  // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
+  "files.autoSave": "off",
+
+  // Controls the delay in ms after which a dirty file is saved automatically. Only applies when 'files.autoSave' is set to 'afterDelay'
+  "files.autoSaveDelay": 1000,
+
+  // Configure glob patterns of file paths to exclude from file watching. Patterns must match on absolute paths (i.e. prefix with ** or the full path to match properly). Changing this setting requires a restart. When you experience Code consuming lots of cpu time on startup, you can exclude large folders to reduce the initial load.
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true
+  },
+
+  // Controls whether unsaved files are remembered between sessions, allowing the save prompt when exiting the editor to be skipped.
+  "files.hotExit": "onExit",
+
+  // Use the new experimental file watcher.
+  "files.useExperimentalFileWatcher": false,
+
+  // The default language mode that is assigned to new files.
+  "files.defaultLanguage": "",
+
+
+  // Controls if turning on Zen Mode also puts the workbench into full screen mode.
+  "zenMode.fullScreen": true,
+
+  // Controls if turning on Zen Mode also hides workbench tabs.
+  "zenMode.hideTabs": true,
+
+  // Controls if turning on Zen Mode also hides the status bar at the bottom of the workbench.
+  "zenMode.hideStatusBar": true,
+
+  // Controls if turning on Zen Mode also hides the activity bar at the left of the workbench.
+  "zenMode.hideActivityBar": true,
+
+  // Controls if a window should restore to zen mode if it was exited in zen mode.
+  "zenMode.restore": false,
+
+
+  // Number of editors shown in the Open Editors pane. Set it to 0 to hide the pane.
+  "explorer.openEditors.visible": 9,
+
+  // Controls if the height of the open editors section should adapt dynamically to the number of elements or not.
+  "explorer.openEditors.dynamicHeight": true,
+
+  // Controls if the explorer should automatically reveal and select files when opening them.
+  "explorer.autoReveal": true,
+
+  // Controls if the explorer should allow to move files and folders via drag and drop.
+  "explorer.enableDragAndDrop": true,
+
+
+  // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.
+  "search.exclude": {
+    "**/node_modules": false,
+    "**/bower_components": false
+  },
