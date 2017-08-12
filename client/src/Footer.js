@@ -1,12 +1,37 @@
 import React, { Component } from 'react';
 import './App.css';
-
-
 import {connect} from 'react-redux'
-
 import {Footer} from 'react-materialize'
 
+import axios from 'axios'
+
 export class Foot extends Component {
+    constructor() {
+        super()
+        this.sendEmail = this.sendEmail.bind(this);
+        this.borderNone = this.borderNone.bind(this);
+    }
+
+    sendEmail() {
+        if (this.refs.email.checkValidity()) {
+        axios.post('/api/email', { email: this.refs.email.value})
+            .then((response) => {
+                console.log('saved successfully')
+            })
+            .catch((err) => {
+                console.log('Not Saved Successfully')
+            })
+        } else {
+            this.refs.email.style = 'border: 2px solid #fc7b7b'
+        }
+ 
+    }
+
+    borderNone() {
+        this.refs.email.style.border = 'none';
+    }
+
+
   render() {
 
     return (
@@ -29,8 +54,8 @@ export class Foot extends Component {
                         <div className="email">
                             <h5 className="white-text">Get Notified</h5>
                                 <div >
-                                <input type="email" placeholder="email@email.com" /> 
-                                <button>Go</button>
+                                <input ref="email" type="email" placeholder="email@email.com" onInput={this.borderNone}/> 
+                                <button onClick={this.sendEmail} >Go</button>
                             </div>
                         </div>
                     </div>
