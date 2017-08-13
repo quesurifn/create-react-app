@@ -44,7 +44,17 @@ body {
   right: 0 !important;
   left: initial !important;
 }
-
+.facebookButton {
+  height: 50px;
+  background:#3B5998;
+  color:white;
+  display: flex;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FacebookLogin from 'react-facebook-login';
+import FacebookProvider, { Login } from 'react-facebook';
 import './App.css';
 
 import {connect} from 'react-redux'
@@ -54,7 +54,7 @@ export class StepOne extends Component {
            offset: 14,
             position: 'top left',
             theme: 'dark',
-            transition: 'scale'
+          transition: 'scale'
         })
       }
     }
@@ -86,12 +86,15 @@ export class StepOne extends Component {
             <Button waves='light' onClick={this.stepTwo} >Continue</Button>
             <hr />
 
-            
-            <FacebookLogin
-              appId="269243040241559"
-              autoLoad={true}
-              fields="name,email,picture"
-              callback={responseFacebook} />
+             <FacebookProvider appId="269243040241559">
+              <Login
+                scope="email"
+                onResponse={responseFacebook}
+                onError={console.log('error')}
+              >
+                <span className="facebookButton">Login via Facebook</span>
+              </Login>
+            </FacebookProvider>
             </div>
             </div>
           </div>
