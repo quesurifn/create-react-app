@@ -16,15 +16,15 @@ router.post('/email', function(req, res, next) {
  let email = req.body.email;
  console.log(req.body.email)
 
-        let base64Email = Buffer.from(email).toString('base64');
-        var request = sg.emptyRequest()
-          request.body = [
+  let base64Email = Buffer.from(email).toString('base64');
+  var request = sg.emptyRequest()
+    request.body = [
           {
             "email": email,
 
           },
           
-        ];
+  ];
           request.method = 'POST'
           request.path = '/v3/contactdb/recipients'
           sg.API(request, function (error, response) {
@@ -84,6 +84,31 @@ router.post('/register', function(req, res) {
 router.post('/login', function(req, res) {
   const email = req.body.email;
   const pw = req.body.password;
+
+  pg.connect(connectionString, (err, client, done) => {
+          if(err) {
+            done();
+            console.log(err);
+            return res.status(400).json({success: false, data: err});
+          }
+          // SQL Query > Insert Data
+          client.query('SELECT password FROM USERS WHERE EMAIL = $1', [email] ,(err, res) => {
+            if (err) {
+              console.log(err)
+              res.status(400).send({"status":"ERR"})
+            }
+            console.log(res)
+            client.end()
+
+            bcrypt.compare(pw, res, function(err, res) {
+              console.log(err || res)
+            });
+          })
+         
+  });
+
+
+  
     
 });
     

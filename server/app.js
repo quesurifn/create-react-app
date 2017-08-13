@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var compression = require('compression')
+var session = require('express-session');
 
 
 
@@ -17,7 +18,7 @@ var app = express();
 
 
 app.use(compression({level: 9}))
-
+app.use(session({ secret: process.env.SECRET, cookie: { maxAge: 600000 }}));
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
