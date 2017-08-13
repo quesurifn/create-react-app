@@ -108,6 +108,13 @@ footer {
   width:200px;
   display: inline;
 }
+
+input:focus {
+  box-shadow: none !important;
+}
+.margin80 {
+  margin-top: 80px;
+}
 .email button {
   background: #CACBD4;
   display: inline;
@@ -117,6 +124,16 @@ footer {
   width:60px;
   color:white;
   border-radius: 0 6px 6px 0;
+}
+.stepOne input{
+  display: block !important;
+  width: 100%;
+}
+.stepOne button {
+  width: 100%;
+}
+hr { 
+  margin: 40px auto;
 }
 .email button:hover {
   background-color: #aeafb2;

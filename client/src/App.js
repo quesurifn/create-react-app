@@ -9,7 +9,7 @@ import {StepOne} from './StepOne'
 
 export const App = () => (
   <div>
-
+  
     <Header />
 
 
@@ -17,7 +17,7 @@ export const App = () => (
     <main>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/stepOne" component={StepOne} />
+        <Route exact path="/stepone" component={StepOne} />
         <Route  component={NotFound} />
       </Switch>
     </main>

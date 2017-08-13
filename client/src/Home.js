@@ -9,6 +9,15 @@ import Logo from './images/logo.svg'
 import {Button} from 'react-materialize'
 
 export class Home extends Component {
+  constructor() {
+    super() 
+    this.startCheckout= this.startCheckout.bind(this);
+  }
+
+  startCheckout() {
+    this.props.history.push('/stepone')
+  }
+
   render() {
     var sectionStyle = {
       width: "100%",
@@ -28,7 +37,7 @@ export class Home extends Component {
         <div className="hero" style={sectionStyle} >
             
           <h1>Food is better when you know where it comes from</h1>
-          <Button waves='light'>Shop Plans</Button>
+          <Button waves='light' onClick={this.startCheckout}>Shop Plans</Button>
         </div>
       
       </div>
