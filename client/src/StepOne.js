@@ -24,7 +24,6 @@ export class StepOne extends Component {
     super() 
     this.isItValid = this.isItValid.bind(this)
     this.stepTwo = this.stepTwo.bind(this)
-    this.stepTwoFB = this.stepTwoFB.bind(this)
   }
     
 
