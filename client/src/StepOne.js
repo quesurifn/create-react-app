@@ -4,7 +4,7 @@ import './App.css';
 import crypto from 'crypto'
 
 import {connect} from 'react-redux'
-import {setFaceBookToken} from './actions/action'
+import {setFaceBookToken, userInfo} from './actions/action'
 import AlertContainer from 'react-alert'
 import $ from "jquery";
 
@@ -15,7 +15,8 @@ import box from './images/boxoffood.png'
 @connect((store) => {
   console.log('store',store)
   return {
-    fbkey: store.reducer.fbkey
+    fbkey: store.reducer.fbkey,
+    userSuccess: store.reducer.userSuccess
   }
 })
 export class StepOne extends Component {
@@ -35,11 +36,23 @@ export class StepOne extends Component {
         el.style.borderBottom = '2px solid green';
       }
     }
+    
+    componentWillUpdate(nextProps) {
 
+    }
     
     stepTwo() {
       if(this.refs.loginEmail.checkValidity() && this.refs.loginPassword.checkValidity() && this.refs.zipcode.checkValidity()) {
-        this.props.history.push('/steptwo')
+       
+        let obj = {
+          email: this.refs.loginEmail.value,
+          password: this.refs.loginPassword.value,
+          zipcode: this.refs.zipcode.value
+        }
+        
+        this.props.dispatch(userInfo(obj))
+
+
       } else {
       
          this.msg.show('Please double check your email, password and zipcode.', {
@@ -53,10 +66,7 @@ export class StepOne extends Component {
       }
     }
 
-    stepTwoFB() {
-
-    
-    }
+   
 
   render() {
     const responseFacebook = (response) => {

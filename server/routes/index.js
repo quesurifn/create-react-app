@@ -73,10 +73,7 @@ router.post('/register', function(req, res) {
         console.log(results, metadata)
         res.status(200).send({"status": "success"})
       })
-
     })
-
-
 });
     
 
@@ -103,7 +100,7 @@ router.post('/login', function(req, res) {
             }
         });
       })
-  })
+})
 
 
        
