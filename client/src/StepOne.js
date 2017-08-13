@@ -20,22 +20,24 @@ export class StepOne extends Component {
       console.log(response);
       this.props.dispatch(setFaceBookToken(response.accessToken))
     }
+    const 
     
     return (
       <div>
         
         <input ref="loginEmail" type="email" />
         <input ref="loginPassword" type="passowrd" /> 
-
+        <input ref="zipcode" type="text" pattern="[0-9]{5}" placeholder="ex. 60010" />
+        
         <hr />
 
         
-      <FacebookLogin
-        appId="269243040241559"
-        autoLoad={true}
-        fields="name,email,picture"
-        callback={responseFacebook} />
-      </div>
+        <FacebookLogin
+          appId="269243040241559"
+          autoLoad={true}
+          fields="name,email,picture"
+          callback={responseFacebook} />
+        </div>
     );
   }
 }
