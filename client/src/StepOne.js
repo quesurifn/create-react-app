@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import FacebookProvider, { Login } from 'react-facebook';
 import './App.css';
 
+
 import {connect} from 'react-redux'
 import {setFaceBookToken} from './actions/action'
 import AlertContainer from 'react-alert'
+import $ from "jquery";
 
 
-import {Button} from 'react-materialize'
+import {Button, Modal} from 'react-materialize'
 import box from './images/boxoffood.png'
 
 @connect((store) => {
@@ -28,8 +30,9 @@ export class StepOne extends Component {
     time: 5000,
     transition: 'scale'
   }
-      this.isItValid = this.isItValid.bind(this);
+      this.isItValid = this.isItValid.bind(this)
       this.stepTwo = this.stepTwo.bind(this)
+       this.stepTwoFB = this.stepTwoFB.bind(this)
   }
     
 
@@ -42,7 +45,7 @@ export class StepOne extends Component {
       }
 
     }
-
+  
     stepTwo() {
       if(this.refs.loginEmail.checkValidity() && this.refs.loginPassword.checkValidity() && this.refs.zipcode.checkValidity()) {
         this.props.history.push('/steptwo')
@@ -51,19 +54,25 @@ export class StepOne extends Component {
          this.msg.show('Please double check your email, password and zipcode.', {
           time: 3000,
           type: 'error',
-           offset: 14,
-            position: 'top left',
-            theme: 'dark',
+          offset: 14,
+          position: 'top left',
+          theme: 'dark',
           transition: 'scale'
         })
       }
     }
 
+    stepTwoFB() {
+
+
+    }
+
   render() {
     const responseFacebook = (response) => {
-      console.log(response);
+ 
       this.props.dispatch(setFaceBookToken(response))
     }
+
 
    
     
@@ -85,17 +94,28 @@ export class StepOne extends Component {
 
             <Button waves='light' onClick={this.stepTwo} >Continue</Button>
             <hr />
+              
 
-             <FacebookProvider appId="269243040241559">
-              <Login
-                scope="email"
-                onResponse={responseFacebook}
-                onError={console.log('error')}
-              >
-                <span className="facebookButton">Login via Facebook</span>
-              </Login>
-            </FacebookProvider>
-            </div>
+                  <FacebookProvider appId="269243040241559">
+                    <Login
+                      scope="email"
+                      onResponse={responseFacebook}
+                      onError={console.log('error')}
+                    >
+                      <span className="facebookButton"  >Login via Facebook</span>
+                    </Login>
+                  </FacebookProvider>
+                  <Modal
+                      id='fbzip'
+                      	
+                                              header='Zip Code'>
+                        <input ref="zipcodeFB" type="text" pattern="[0-9]{5}" placeholder="ex. 60010" onChange={(e) => this.isItValid(e)} required/>
+                        
+
+                          <Button waves='light' onClick={this.stepTwoFB} >Continue</Button>
+
+                    </Modal>
+                </div>
             </div>
           </div>
         </div>

@@ -26,7 +26,7 @@ export class Header extends Component {
                 <NavItem>Market</NavItem>
             </Navbar>
 
-            <div className="banner" refs="banner">
+            <div className="banner" ref="banner">
                 <p onClick={this.hideBanner} className="exit">X</p>
             </div> 
         </div>
