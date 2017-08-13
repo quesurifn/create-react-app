@@ -1,10 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var pg = require('pg')
+const bcrypt = require('bcrypt');
 
 require('dotenv').config()
 console.log(process.env.SENDGRID_KEY)
 var sg = require('sendgrid')(process.env.SENDGRID_KEY);
 
+
+const connectionString = process.env.DATABASE_URL
 
 
 /* GET home page. */
@@ -44,6 +48,44 @@ router.post('/email', function(req, res, next) {
           })
 
        
+}); 
+
+router.post('/register', function(req, res) {
+    const email = req.body.email;
+    const pw = req.body.password;
+    const zipcode = req.body.zipcode;
+
+    bcrypt.hash(pw, 10, function(err, hash) {
+
+       pg.connect(connectionString, (err, client, done) => {
+          // Handle connection errors
+          if(err) {
+            done();
+            console.log(err);
+            return res.status(500).json({success: false, data: err});
+          }
+          // SQL Query > Insert Data
+         client.query(' INSERT INTO emails (email, password, zipcode) values($1, $2, $3)' [email, hash, zipcode])
+          // SQL Query > Select Data
+          // Stream results back one row at a time
+          query.on('error', (err) => {
+            res.status(400).send({"status":"ERR"})
+          });
+          // After all data is returned, close connection and return results
+          query.on('end', () => {
+            done();
+            return res.status(200).send({"status":"OK"})
+          });
+        });
+    })
 });
+    
+
+router.post('/login', function(req, res) {
+  const email = req.body.email;
+  const pw = req.body.password;
+    
+});
+    
 
 module.exports = router;

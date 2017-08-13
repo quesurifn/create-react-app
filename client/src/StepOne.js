@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FacebookProvider, { Login } from 'react-facebook';
 import './App.css';
-
+import crypto from 'crypto'
 
 import {connect} from 'react-redux'
 import {setFaceBookToken} from './actions/action'
@@ -15,24 +15,15 @@ import box from './images/boxoffood.png'
 @connect((store) => {
   console.log('store',store)
   return {
-    fbkey: store.reducer.fbkey,
-    twittername: store.reducer.twittername
+    fbkey: store.reducer.fbkey
   }
 })
 export class StepOne extends Component {
-  
   constructor() {
     super() 
-      const alertOptions = {
-    offset: 14,
-    position: 'top left',
-    theme: 'dark',
-    time: 5000,
-    transition: 'scale'
-  }
-      this.isItValid = this.isItValid.bind(this)
-      this.stepTwo = this.stepTwo.bind(this)
-       this.stepTwoFB = this.stepTwoFB.bind(this)
+    this.isItValid = this.isItValid.bind(this)
+    this.stepTwo = this.stepTwo.bind(this)
+    this.stepTwoFB = this.stepTwoFB.bind(this)
   }
     
 
@@ -43,9 +34,9 @@ export class StepOne extends Component {
       } else {
         el.style.borderBottom = '2px solid green';
       }
-
     }
-  
+
+    
     stepTwo() {
       if(this.refs.loginEmail.checkValidity() && this.refs.loginPassword.checkValidity() && this.refs.zipcode.checkValidity()) {
         this.props.history.push('/steptwo')
@@ -64,7 +55,7 @@ export class StepOne extends Component {
 
     stepTwoFB() {
 
-
+    
     }
 
   render() {
@@ -108,7 +99,7 @@ export class StepOne extends Component {
                   <Modal
                       id='fbzip'
                       	
-                                              header='Zip Code'>
+                          header='Zip Code'>
                         <input ref="zipcodeFB" type="text" pattern="[0-9]{5}" placeholder="ex. 60010" onChange={(e) => this.isItValid(e)} required/>
                         
 
