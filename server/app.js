@@ -7,12 +7,7 @@ var bodyParser = require('body-parser');
 var compression = require('compression')
 var session = require('express-session');
 
-
-
-
 var index = require('./routes/index');
-
-
 
 var app = express();
 
