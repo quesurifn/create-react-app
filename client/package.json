@@ -6,6 +6,7 @@
     "axios": "^0.16.2",
     "history": "^4.6.3",
     "react": "^15.6.1",
+    "react-alert": "^2.2.0",
     "react-dom": "^15.6.1",
     "react-facebook-login": "^3.6.2",
     "react-materialize": "^1.0.8",

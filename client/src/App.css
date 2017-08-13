@@ -39,6 +39,11 @@ body {
 
 
 }
+.css-1bdcmy7, [data-css-1bdcmy7] {
+  top: 0 !important; 
+  right: 0 !important;
+  left: initial !important;
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
