@@ -60,4 +60,8 @@ app.use(function(err, req, res, next) {
   res.send('ERROR: ', err.message)
 });
 
+process.on('uncaughtException', function (err) {
+  console.log(err);
+})
+
 module.exports = app;

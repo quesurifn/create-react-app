@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  overflow: hidden;
+
  background: white;
   height: 100vh;
 
@@ -39,6 +39,14 @@ body {
 
 
 }
+  .center {
+    display: block;
+    margin: auto;
+  }
+  .subheader {
+    font-size: 30px;
+    margin-top: 80px;
+  }
   .modal-close {
     display: none;
   }
@@ -169,9 +177,38 @@ hr {
   position: absolute;
   right: 10px;
 }
+.row, .col-md-12, .col-md-4 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
 .exit:hover {
   color: gray;
+}
+.margin40 {
+  margin-top: 40px;
+}
+.width70 {
+  max-width: 70%;
+}
+.width40 {
+  max-width: 40%;
+}
+.subtitle {
+  font-size:30px !important;
+
+}
+.width60 {
+  max-width: 60%;
+}
+
+@media screen and (max-width:475px) {
+  .resfont {
+    font-size: 24px !important;
+  }
+  .hideMobile {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 722px) {

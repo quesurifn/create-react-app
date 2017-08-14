@@ -13,7 +13,7 @@ import {Button, Modal} from 'react-materialize'
 import box from './images/boxoffood.png'
 
 @connect((store) => {
-  console.log('store',store)
+  
   return {
     fbkey: store.reducer.fbkey,
     userSuccess: store.reducer.userSuccess
@@ -37,7 +37,7 @@ export class StepOne extends Component {
     }
     
     componentWillUpdate(nextProps) {
-
+      console.log(nextProps)
     }
     
     stepTwo() {
@@ -100,7 +100,7 @@ export class StepOne extends Component {
                     <Login
                       scope="email"
                       onResponse={responseFacebook}
-                      onError={console.log('error')}
+                      onError={(e) => console.log(e) }
                     >
                       <span className="facebookButton"  >Login via Facebook</span>
                     </Login>

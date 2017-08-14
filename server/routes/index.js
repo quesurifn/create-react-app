@@ -65,7 +65,7 @@ router.post('/register', function(req, res) {
         console.log('Connection has been established successfully.');
       })
       .catch(err => {
-        res.status(200).send({"status":"ERR"})
+        res.status(400).send({"status":"ERR"})
         console.error('Unable to connect to the database:', err);
       });
     
@@ -87,7 +87,7 @@ router.post('/login', function(req, res) {
         console.log('Connection has been established successfully.');
       })
       .catch(err => {
-        res.status(200).send({"status":"ERR"})
+        res.status(400).send({"status":"ERR"})
         console.error('Unable to connect to the database:', err);
       });
     

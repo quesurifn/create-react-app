@@ -15,13 +15,13 @@ export function userInfo(userInfo) {
     .then(r => {
         console.log(r)
         return (dispatch) => {
-            dispatch(USER_SUCCESS())
+            dispatch({"type":"USER_SUCCESS"})
         }
     })
     .catch(e => {
         console.log(e) 
         return (dispatch) => {
-            dispatch(USER_ERROR())
+            dispatch({"type":"USER_ERROR"})
         }
     })
 }

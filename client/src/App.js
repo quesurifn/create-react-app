@@ -12,9 +12,6 @@ export const App = () => (
   <div>
 
     <Header />
-
-
-
     <main>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -25,7 +22,6 @@ export const App = () => (
     </main>
 
 
-    <Foot />
 
   </div>
 )
