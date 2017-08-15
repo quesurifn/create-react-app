@@ -1,68 +1,77 @@
 import React, { Component } from 'react';
 import './App.css';
-import {connect} from 'react-redux'
-import {Footer} from 'react-materialize'
 
-import axios from 'axios'
+
 
 export class Foot extends Component {
-    constructor() {
-        super()
-        this.sendEmail = this.sendEmail.bind(this);
-        this.borderNone = this.borderNone.bind(this);
-    }
-
-    sendEmail() {
-        if (this.refs.email.checkValidity()) {
-        axios.post('/api/email', { email: this.refs.email.value})
-            .then((response) => {
-                console.log('saved successfully')
-                this.refs.banner.display = "block";
-            })
-            .catch((err) => {
-                console.log('Not Saved Successfully')
-            })
-        } else {
-            this.refs.email.style = 'border: 2px solid #fc7b7b'
-        }
- 
-    }
-
-    borderNone() {
-        this.refs.email.style.border = 'none';
-    }
+  
 
 
   render() {
 
     return (
-      <div>
-            <Footer copyrights="&copy; 2017 Blue Apron"
-        
-            links={
-                <ul>
-                    <li><a className="grey-text text-lighten-3" href="#!">Terms</a></li>
-                    <li><a className="grey-text text-lighten-3" href="#!">Privacy Policy</a></li>
-                    <li><a className="grey-text text-lighten-3" href="#!">Google Play</a></li>
-                    <li><a className="grey-text text-lighten-3" href="#!">App Store</a></li>
-                </ul>
-            }
-            className='example'
-        >
-                
-               <div className="row">
-                    <div className="col s5">
-                        <div className="email">
-                            <h5 className="white-text">Get Notified</h5>
-                                <div >
-                                <input ref="email" type="email" placeholder="email@email.com" onInput={this.borderNone}/> 
-                                <button onClick={this.sendEmail} >Go</button>
-                            </div>
-                        </div>
+        <footer>
+            <hr />
+            <div className="container"> 
+            <div className="row">
+                <div className="col-md-3">
+                    <p>Company</p>
+                    <ul>
+                        <li><p>About Food Crates</p></li>
+                        <li><p>Jobs</p></li>
+                        <li><p>Blog</p></li>
+                        <li><p>Press</p></li> 
+                        <li><p>Investor Relations</p></li>
+                        <li><p>Management Team</p></li>
+                        <li><p>In Your Community</p></li>
+                    </ul>
                     </div>
-               </div>
-        </Footer>
-      </div>
+       
+                 <div className="col-md-3">
+                    <p>Work With Food Crates</p>
+                    <ul>
+                        <li><p>Join The Food Crates Marketplace</p></li>
+                        <li><p>Run a Groupon Deal</p></li>
+                        <li><p>Learn About Groupon Merchant</p></li>
+                        <li><p>Affiliate Program</p></li> 
+                        <li><p>Vendor Code of Conduct</p></li>
+                    </ul>
+                </div>
+                <div className="col-md-3">
+                    <p>More</p>
+                    <ul>
+                        <li><p>Customer Support</p></li>
+                        <li><p>Refund Policies</p></li>
+                        <li><p>FAQ</p></li>
+                        <li><p>Coupons</p></li> 
+                        <li><p>Gift Cards</p></li>
+                        <li><p>Gift Shop</p></li>
+                        <li><p>Students</p></li>
+                    </ul>
+                </div>
+                <div className="col-md-3">
+                    <p>Follow Us</p>
+                    <div className="flexCont">
+                        <div className="grayBox"><i className="fa fa-facebook" aria-hidden="true"></i></div>
+                        <div className="grayBox"><i className="fa fa-twitter" aria-hidden="true"></i></div>
+                    </div>
+                       
+            
+
+                </div>
+                <p>Incredible Deals on Local Experiences</p>
+                <small>Discover fun activities and huge discounts in your city with Groupon. Check out great deals on things to do from kids activities to nightlife; try out new restaurants, spas, massages and hair salons near you, or plan a trip away from home.</small>
+                <div className="flexCont2">
+                    <p>2017 &copy; Food Containers Inc. All Rights Reserved.</p>
+                    <a>Terms Of Use</a>
+                    <a>Privacy Statement</a>
+                    <a>Licenses</a> 
+                    <a>Responsible Disclosure</a>
+                </div>
+            </div>
+        </div>
+        </footer>
+
     );
   }
 }

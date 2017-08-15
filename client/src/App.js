@@ -7,11 +7,13 @@ import {Header} from './Header'
 import {Foot} from './Footer'
 import {StepOne} from './StepOne'
 import {StepTwo} from './StepTwo'
+import {SubHead} from './SubHead'
 
 export const App = () => (
   <div>
 
     <Header />
+    <SubHead />
     <main>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -21,7 +23,7 @@ export const App = () => (
       </Switch>
     </main>
 
-
+    <Foot />
 
   </div>
 )

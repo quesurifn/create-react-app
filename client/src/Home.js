@@ -76,7 +76,7 @@ export class Home extends Component {
                  <h3 className="subtitle margin80 width60 center resfont">When you cook with Blue Apron, you're building a better food system</h3>
                   <div className="row margin40">
 
-                    <div className="col-md-3 borderRight mNoBorder">
+                    <div className="col-md-3 borderRight mNoB order">
                       <p className="width50 center" >Creating Better Standards</p>
                     </div>
                     <div className="col-md-3 borderRight mBorderTop">
