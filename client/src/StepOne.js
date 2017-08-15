@@ -82,10 +82,10 @@ export class StepOne extends Component {
           <div className="margin80 stepOne">
           <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
           
-          <div className="col s6">
+          <div className="col-md-6">
               <img src={box}/> 
           </div>
-          <div className="col s6 stepOne">
+          <div className="col-md-6 stepOne">
 
             <input ref="loginEmail" type="email" placeholder="email@yourdomain.com" onChange={(e) => this.isItValid(e)} required/>
             <input ref="loginPassword" type="password" placeholder="Uppercase, Lowercase. 8 or more characters" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onChange={(e) => this.isItValid(e)} required/> 

@@ -42,6 +42,7 @@ body {
   .center {
     display: block;
     margin: auto;
+    text-align: center;
   }
   .subheader {
     font-size: 30px;
@@ -181,12 +182,29 @@ hr {
   padding: 0 !important;
   margin: 0 !important;
 }
+.line {
+  background: blue;
+  height: 1px;
+  width:20%;
+  position: relative;
+
+
+}
+.lines {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  bottom:40px;
+
+}
 
 .exit:hover {
   color: gray;
 }
 .margin40 {
-  margin-top: 40px;
+  margin-top: 40px !important;
 }
 .width70 {
   max-width: 70%;
@@ -201,7 +219,65 @@ hr {
 .width60 {
   max-width: 60%;
 }
+.width50 {
+  max-width: 50%;
+}
+.bold {
+  font-weight: bold;
+}
+.borderRight {
+  border-right: 1px solid #d3d3d3 !important;
+}
+.font30 {
+  font-size: 30px;
+}
+.font15 {
+  font-size: 15px;
+}
+.border {
+  border-left: 1px solid blue;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid blue;
+}
+.full {
+  width:100%;
+}
+.margin200 {
+  margin-top:200px;
+}
+.margin100 {
+  margin-top: 100px;
+}
+.bottom70 {
+  position: relative;
+  bottom:70px;
+}
+.bottom45 {
+  position:  relative;
+  bottom: 45px;
+}
+.margin0 {
+  margin: 0 !important;
+}
+.margin5 {
+  margin-top: 5px;
+}
+.margin20 {
+  margin-top:20px;
+}
 
+
+@media screen and (max-width:1200px) {
+  .hide1200b {
+    border: none !important;
+  }
+  .hide1200 {
+    display: none;
+  }
+  .lines {
+    justify-content: center;
+  }
+}
 @media screen and (max-width:475px) {
   .resfont {
     font-size: 24px !important;
