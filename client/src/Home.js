@@ -5,6 +5,7 @@ import './App.css';
 import {connect} from 'react-redux'
 import Background from './images/food.jpg'
 import Logo from './images/logo.svg'
+import Slider from './Slider'
 
 import {Button} from 'react-materialize'
 
@@ -34,18 +35,41 @@ export class Home extends Component {
     };
     return (
       <div className="App">
-            <div className="hero" style={sectionStyle} >
+
+         <Slider
+          loop={ true }
+          showNav={ false }
+          selected={ 0 }>
+
+
+
+          <div style={{ background: '#21BB9A' }}>
+             <div className="hero" style={sectionStyle} >
                 
               <h1>Food is better when you know where it comes from</h1>
               <Button waves='light' onClick={this.startCheckout}>Shop Plans</Button>
             </div>
-            <div className="row">
+            
+
+        </div>
+      
+          <div style={{ background: '#329ADD' }}>B</div>
+          <div style={{ background: '#9A5CB9' }}>C</div>
+          <div style={{ background: '#E64C3C' }}>D</div>
+          <div style={{ background: '#2D3F52' }}>E</div>
+        </Slider>
+        <div className="row">
               <div className="col-md-12">
                 
                 <h3 className="subheader resfont">Dinner, the Blue Apron way</h3> 
               </div>
+
+          </div>
+           
               <div className="container">
                 <div className="row">
+
+
                   <div className="col-md-4">
                     <img className="margin80" src="https://placehold.it/200x200" />
 
@@ -57,9 +81,9 @@ export class Home extends Component {
                       <img className="center margin80 hideMobile" src="https://placehold.it/200x600" alt=""/>
                   </div>
 
-                   <div className="col-md-4">
+                  <div className="col-md-4">
                     <img className="margin80" src="https://placehold.it/200x200" />
-                     <img className="margin80" src="https://placehold.it/200x200" />
+                    <img className="margin80" src="https://placehold.it/200x200" />
                   </div>
 
 
@@ -123,7 +147,7 @@ export class Home extends Component {
                   </div>
               </div>
               </div>
-            </div>
+
     
     );
   }
