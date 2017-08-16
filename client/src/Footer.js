@@ -70,7 +70,7 @@ export class Foot extends Component {
 
             </div>
         
-
+            <div className="container"> 
             <div className="row margin40">
                 <div className="col-md-3">
                     <p>Company</p>
@@ -127,7 +127,7 @@ export class Foot extends Component {
                     <a>Responsible Disclosure</a>
                 </div>
             </div>
-
+        </div>
         </footer>
 
     );
