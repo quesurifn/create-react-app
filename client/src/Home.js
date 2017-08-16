@@ -41,6 +41,7 @@ export class Home extends Component {
             </div>
             <div className="row">
               <div className="col-md-12">
+                
                 <h3 className="subheader resfont">Dinner, the Blue Apron way</h3> 
               </div>
               <div className="container">

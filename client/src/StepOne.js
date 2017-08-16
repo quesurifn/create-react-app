@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import FacebookProvider, { Login } from 'react-facebook';
 import './App.css';
-import crypto from 'crypto'
 
 import {connect} from 'react-redux'
 import {setFaceBookToken, userInfo} from './actions/action'
 import AlertContainer from 'react-alert'
-import $ from "jquery";
+
 
 
 import {Button, Modal} from 'react-materialize'
@@ -49,8 +48,7 @@ export class StepOne extends Component {
           zipcode: this.refs.zipcode.value
         }
         
-        this.props.dispatch(userInfo(obj))
-
+   
 
       } else {
       
@@ -92,7 +90,7 @@ export class StepOne extends Component {
             <input ref="zipcode" type="text" pattern="[0-9]{5}" placeholder="ex. 60010" onChange={(e) => this.isItValid(e)} required/>
             
 
-            <Button waves='light' onClick={this.stepTwo} >Continue</Button>
+            <Button waves='light' className="width100" onClick={this.stepTwo} >Continue</Button>
             <hr />
               
 
