@@ -11,9 +11,67 @@ export class Foot extends Component {
 
     return (
         <footer>
-            <hr />
-            <div className="container"> 
-            <div className="row">
+            <h2 className='center footerHeader'>More Food Crates</h2>
+            <div className='moreCrates margin40'>
+                 <div className="col-3 padright5">
+                    <div className="selectionButton right width100">
+                      <div className='row'>
+                        <div className='col-9 flexLeft'>
+                          <h5>2 Person Food Crate</h5>
+                          <p>Olive Sampler</p>
+                        </div>
+                        <div className='col-3 col-3 vert flexPrice'>
+                          <p className='gothicP'>$36</p>
+
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                   <div className="col-3 padright5">
+                    <div className="selectionButton right width100">
+                      <div className='row'>
+                        <div className='col-9 flexLeft'>
+                          <h5>6 Person Food Crate</h5>
+                          <p>Italian Cheese Collection</p>
+                        </div>
+                        <div className='col-3 col-3 vert flexPrice'>
+                          <p className='gothicP'>$36</p>
+
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                   <div className="col-3 padright5">
+                    <div className="selectionButton right width100">
+                      <div className='row'>
+                        <div className='col-9 flexLeft'>
+                          <h5>2 Person Food Crate</h5>
+                          <p>Pepper Mixer</p>
+                        </div>
+                        <div className='col-3 col-3 vert flexPrice'>
+                          <p className='gothicP'>$36</p>
+
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+              
+            </div>
+
+            <div className='acclaim'>
+                  <p className='center margin80'>&#8220;Food crates actual food is outstanding! It doesn't get any more authentic than this.&#8221;</p>
+
+            </div>
+        
+
+            <div className="row margin40">
                 <div className="col-md-3">
                     <p>Company</p>
                     <ul>
@@ -69,7 +127,7 @@ export class Foot extends Component {
                     <a>Responsible Disclosure</a>
                 </div>
             </div>
-        </div>
+
         </footer>
 
     );

@@ -136,12 +136,40 @@ html {
   font-weight: bold;
   
 } 
+/* MORE CRATES */
+.moreCrates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.moreCrates .flexLeft h5 {
+  font-size: 18px;
+}
+.moreCrates .flexLeft p {
+  font-size: 12px;
+}
+.moreCrates .gothicP {
+  font-size:30px !important;
+}
+.moreCrates .flexLeft, .moreCrates .flexPrice {
+  height: 70px !important; 
+}
+.moreCrates .selectionButton {
+  height:70px;
+  border-radius: 10px;
+}
+/* Footer */
+.acclaim p{
+  font-family: 'Lora', serif;
+  font-size:20px;
+}
 
-  .center {
-    display: block;
-    margin: auto;
-    text-align: center;
-  }
+
+.center {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
   .subheader {
     font-size: 30px;
     margin-top: 80px;
@@ -169,6 +197,29 @@ html {
   max-width: 100%;
   height: auto;
 }
+.meatBG { 
+  margin-top:80px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-image: url('./images/meatbg.png');
+  height: 110vh;
+}
+.col-12 {
+  padding: 0 !important;
+}
+.plans h2 {
+  font-family: 'Lora', serif !important;
+  font-size: 20px;
+}
+.plans {
+  padding: 0 !important;
+}
+.footerHeader {
+  font-size:40px;
+  font-family: 'Loal', serif;
+}
+
 
 @media screen and (max-width: 769px) {
   .selectionButton { 
@@ -211,6 +262,7 @@ html {
   padding-left: 0;
   font-size:11px;
 }
+
 .flexPrice p {
   font-size:18px !important;
 }

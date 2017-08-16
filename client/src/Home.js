@@ -16,6 +16,7 @@ import parma from './images/parma.png'
 import reggiano from './images/reggiano.png'
 import padano from './images/padano.png'
 import sanmarzano from './images/sanmarzano.png'
+import meat from './images/meatbg.png'
 
 export class Home extends Component {
   constructor() {
@@ -153,94 +154,31 @@ export class Home extends Component {
 
                     <img src={crate} className='crate' alt='food crate' />
                   </div>
-                </div>
-              </div>  
+             
           
 
           </div>
            
-              <div className="container">
+
                 <div className="row">
-
-
-                  <div className="col-md-4">
-                    <img className="margin80" src="https://placehold.it/200x200" alt="placeholder" />
-
-                     <img className="margin80" src="https://placehold.it/200x200" alt="placeholder" />
+                  <div className='col-12'>
+                    <div className='meatBG'></div>
                   </div>
-
-
-                  <div className="col-md-4">
-                      <img className="center margin80 hideMobile" src="https://placehold.it/200x600"alt="placeholder"lt=""/>
-                  </div>
-
-                  <div className="col-md-4">
-                    <img className="margin80" src="https://placehold.it/200x200" alt="placeholder" />
-                    <img className="margin80" src="https://placehold.it/200x200" alt="placeholder" />
-                  </div>
-
-
                 </div>
 
-                <p className="center margin40 width40">Blue Apron's uniquely integrated model means better ingredients, better pricing and a better planet for us all.</p>
-
-                 <Button waves='light' className="margin40" onClick={this.startCheckout}>Get Cooking</Button>
-
-
-
-                 <img className="responsive-img img-responsive margin80" src="https://placehold.it/1169x670" alt="placeholder"/>
-
-
-                 <h3 className="subtitle margin80 width60 center resfont">When you cook with Blue Apron, you're building a better food system</h3>
-                  <div className="row margin40">
-
-                    <div className="col-md-3 borderRight mNoB order">
-                      <p className="width50 center" >Creating Better Standards</p>
-                    </div>
-                    <div className="col-md-3 borderRight mBorderTop">
-                      <p className="width50 center" >Regenerating Our Land</p>
-                    </div>
-                    <div className="col-md-3 borderRight mBorderTop">
-                      <p className="width50 center" >Eliminating The Middleman</p> 
-                    </div>
-                    <div className="col-md-3 borderRight mBorderTop">
-                      <p className="width50 center"> Reducing Food Waste</p> 
-                    </div>
-                      <Button waves='light' className="center margin80" onClick={this.stepTwo} >Continue</Button>
+                <div className='row'>
+                  <div className='col-md-12 bgToap plans'>
+                    <h2 className="center margin80 width40">Exotic Offerings From Premium Brands</h2>
                   </div>
-                  <div className="row">
 
-                    <div className="margin100 center border full hide1200b">
+                </div>
+                
 
-
-                        <h2 className="font30">On The Menu This Season</h2>
-          
-
-                      <h3 className="font15 ">Chicken Ramen with Greens, Soft-Boiled Eggs &amp; Miso Broth</h3>
-
-
-                      <img className="responsive-img img-responsive margin40" src="https://placehold.it/1000x670" alt="placeholder"/>
-
-
-                     
-                    </div>
-                      <div className="center">
-                        <h2 className="center font30 margin80">Our Community of Home Chefs</h2>
-                        <h3 className="center font15 margin10">Our Community of Home Chefs</h3>
-
-
-                        <img className="margin40 width50" src="https://image-service.blueapron.com/render/q/quality/75/src/https%3A%2F%2Fmedia.blueapron.com%2Fhome_page%2FSocialCarousel%2FBASocialImage3.jpg" alt="no" />
-
-
-                        <h2 className="font30 center margin80">We can't wait to cook with you!</h2>
-                        <h3 className="font15 center margin10">Have more questions?<a> Check out our FAQs.</a></h3>
-
-                        <Button waves='light' className="center margin20" onClick={this.stepTwo} >Get Cooking</Button>
-                     </div>
+               
+                </div>
                   </div>
               </div>
-              </div>
-
+     
     
     );
   }
