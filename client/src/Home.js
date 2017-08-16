@@ -94,15 +94,14 @@ export class Home extends Component {
 
                     <div className="margin100 center border full hide1200b">
 
-                      <div className="lines">
-                        <div className="line hide1200"></div>
+
                         <h2 className="font30">On The Menu This Season</h2>
-                        <div className="line hide1200"></div>
-                      </div>
-                      <h3 className="font15 bottom70">Chicken Ramen with Greens, Soft-Boiled Eggs &amp; Miso Broth</h3>
+          
+
+                      <h3 className="font15 ">Chicken Ramen with Greens, Soft-Boiled Eggs &amp; Miso Broth</h3>
 
 
-                      <img className="responsive-img img-responsive bottom45" src="https://placehold.it/1000x670" />
+                      <img className="responsive-img img-responsive margin40" src="https://placehold.it/1000x670" />
 
 
                      
