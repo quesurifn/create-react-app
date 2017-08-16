@@ -17,6 +17,109 @@ body {
   padding: 20px;
   color: white;
 }
+.bgToap {
+  background: #F6EEE1;
+}
+.serif {
+  font-family: 'Lora', serif;
+}
+.woman, .box{
+ 
+  position: absolute;
+  bottom: 0;
+}
+.woman {
+  height:200px;
+}
+.box {
+  height:100px;
+}
+.relative {
+  position: relative;
+}
+
+.selectionButton {
+  width: 80%;
+  height: 120px;
+  border: solid 1px #363636;
+  border-radius: 20px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.selectionButton h5 , .selectionButton p{
+  font-family: 'Lora', serif;
+  text-align: left;
+  padding-left:40px;
+  margin: 5px;
+}
+.selectionButton p {
+  font-size: 18px;
+}
+.selectionButton:hover {
+  background: white;
+}
+.vertLine {
+  height:120px;
+  width:1px; 
+  background: black;
+  position: absolute;
+  right: 20%;
+}
+.flexLeft {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.flexPrice {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.greenButton {
+  font-family: 'Pragati Narrow', sans-serif;
+  background:#5DBE53;
+  border-bottom:3px solid black;
+  border-left: none;
+  border-top: none; 
+  border-right:none;
+  font-size:20px;
+  text-transform: uppercase;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+}
+.greenButton:hover {
+  opacity: 0.7;
+}
+.gothicP {
+    font-size: 50px !important;
+    font-weight: 700;
+    padding: 0 !important;
+}
+.vert {
+  border-left: 1px solid #363636;
+  height: 120px;
+}
+.selectionButton h5 { 
+  font-weight: 700;
+}
+.left { 
+  float:left;
+}
+.right {
+  float: right;
+}
+.font18 {
+  font-size:18px;
+}
+.ordernow {
+  height:19px;
+}
 
 .App-intro {
   font-size: large;
@@ -254,9 +357,14 @@ hr {
   color:white;
   border-radius: 50%;
 }
-
-.headerCont div {
-
+.leftPercent {
+  left: 20%;
+}
+.rightPercent {
+  right:20%;
+}
+.margin115 {
+  margin-top:115px;
 }
 .full {
   width:100%;

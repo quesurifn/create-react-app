@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Navbar, NavItem} from 'react-materialize'
+import {Navbar} from 'react-materialize'
 
 
 export class Header extends Component {

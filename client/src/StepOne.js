@@ -8,7 +8,7 @@ import AlertContainer from 'react-alert'
 
 
 
-import {Button, Modal} from 'react-materialize'
+import {Button} from 'react-materialize'
 import box from './images/boxoffood.png'
 
 @connect((store) => {
@@ -48,7 +48,7 @@ export class StepOne extends Component {
           zipcode: this.refs.zipcode.value
         }
         
-   
+        this.props.history.push('/steptwo')
 
       } else {
       

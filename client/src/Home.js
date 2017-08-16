@@ -4,10 +4,12 @@ import './App.css';
 
 import {connect} from 'react-redux'
 import Background from './images/food.jpg'
-import Logo from './images/logo.svg'
 import Slider from './Slider'
-
+import food from './images/food.png'
 import {Button} from 'react-materialize'
+import order from './images/ordernow.png'
+import woman from './images/woman.png'
+import box from './images/box.png'
 
 export class Home extends Component {
   constructor() {
@@ -59,10 +61,60 @@ export class Home extends Component {
           <div style={{ background: '#2D3F52' }}>E</div>
         </Slider>
         <div className="row">
-              <div className="col-md-12">
-                
-                <h3 className="subheader resfont">Dinner, the Blue Apron way</h3> 
+              <div className="col-md-12 bgToap">
+        
+                <h3 className="subheader resfont serif">Save $20 on your first box</h3> 
+
+                <img className="margin40 img-responsive responsive-img" src={food} alt="fine italian food" />
+                  <div className="row margin40">
+                  <div className="col-md-6">
+                    <div className="selectionButton right">
+                      <div className='row'>
+                        <div className='col-md-9 flexLeft'>
+                          <h5>2 Person Food Crate</h5>
+                          <p>Exotic Meats Reserve</p>
+                        </div>
+                        <div className='col-md-3 vert flexPrice'>
+                          <p className='gothicP'>$36</p>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="selectionButton left">
+                      <div className='row'>
+                        <div className='col-md-9 flexLeft'>
+                          <h5>6 Person Food Crate</h5>
+                          <p>Exotic Meats Reserve</p>
+                        </div>
+                        <div className='col-md-3 vert flexPrice'>
+                          <p className='gothicP'>$79</p>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div className="col-md-12">
+                    <p className="center margin40 font18" >Order Before Friday and get it by the weekend</p>
+                  </div>
+                  <div className="col-md-12">
+                    <div className="greenButton center margin40"><img src={order} alt="order" className="ordernow" /></div>
+                  </div>
+                  <div className="col-md-6 relative margin115">
+                    <img className='woman rightPercent' src={woman} alt="Fresh Delivery Woman" />
+                  </div>
+                  <div className="col-md-6 relative margin115">
+                    <img className='box leftPercent' src={box} alt="delivery box" />
+                  </div>
+                </div> {/* row */}
+
+
               </div>
+          
 
           </div>
            
@@ -71,19 +123,19 @@ export class Home extends Component {
 
 
                   <div className="col-md-4">
-                    <img className="margin80" src="https://placehold.it/200x200" />
+                    <img className="margin80" src="https://placehold.it/200x200" alt="placeholder" />
 
-                     <img className="margin80" src="https://placehold.it/200x200" />
+                     <img className="margin80" src="https://placehold.it/200x200" alt="placeholder" />
                   </div>
 
 
                   <div className="col-md-4">
-                      <img className="center margin80 hideMobile" src="https://placehold.it/200x600" alt=""/>
+                      <img className="center margin80 hideMobile" src="https://placehold.it/200x600"alt="placeholder"lt=""/>
                   </div>
 
                   <div className="col-md-4">
-                    <img className="margin80" src="https://placehold.it/200x200" />
-                    <img className="margin80" src="https://placehold.it/200x200" />
+                    <img className="margin80" src="https://placehold.it/200x200" alt="placeholder" />
+                    <img className="margin80" src="https://placehold.it/200x200" alt="placeholder" />
                   </div>
 
 
@@ -95,7 +147,7 @@ export class Home extends Component {
 
 
 
-                 <img className="responsive-img img-responsive margin80" src="https://placehold.it/1169x670" />
+                 <img className="responsive-img img-responsive margin80" src="https://placehold.it/1169x670" alt="placeholder"/>
 
 
                  <h3 className="subtitle margin80 width60 center resfont">When you cook with Blue Apron, you're building a better food system</h3>
@@ -126,7 +178,7 @@ export class Home extends Component {
                       <h3 className="font15 ">Chicken Ramen with Greens, Soft-Boiled Eggs &amp; Miso Broth</h3>
 
 
-                      <img className="responsive-img img-responsive margin40" src="https://placehold.it/1000x670" />
+                      <img className="responsive-img img-responsive margin40" src="https://placehold.it/1000x670" alt="placeholder"/>
 
 
                      

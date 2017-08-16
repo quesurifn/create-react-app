@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Redirect} from 'react-router-dom'
 
 export class NotFound extends Component {
     componentDidMount() {
