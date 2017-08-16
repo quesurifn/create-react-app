@@ -10,6 +10,12 @@ import {Button} from 'react-materialize'
 import order from './images/ordernow.png'
 import woman from './images/woman.png'
 import box from './images/box.png'
+import crate from './images/foodcrates.png'
+import salami from './images/salami.png'
+import parma from './images/parma.png'
+import reggiano from './images/reggiano.png'
+import padano from './images/padano.png'
+import sanmarzano from './images/sanmarzano.png'
 
 export class Home extends Component {
   constructor() {
@@ -61,36 +67,37 @@ export class Home extends Component {
           <div style={{ background: '#2D3F52' }}>E</div>
         </Slider>
         <div className="row">
-              <div className="col-md-12 bgToap">
+              <div className="col-12 bgToap">
         
                 <h3 className="subheader resfont serif">Save $20 on your first box</h3> 
 
                 <img className="margin40 img-responsive responsive-img" src={food} alt="fine italian food" />
                   <div className="row margin40">
-                  <div className="col-md-6">
+                  <div className="col-6 padright5">
                     <div className="selectionButton right">
                       <div className='row'>
-                        <div className='col-md-9 flexLeft'>
+                        <div className='col-9 flexLeft'>
                           <h5>2 Person Food Crate</h5>
                           <p>Exotic Meats Reserve</p>
                         </div>
-                        <div className='col-md-3 vert flexPrice'>
+                        <div className='col-3 col-3 vert flexPrice'>
                           <p className='gothicP'>$36</p>
 
                         </div>
+
                       </div>
                     </div>
 
                   </div>
 
-                  <div className="col-md-6">
+                  <div className="col-6 padleft5">
                     <div className="selectionButton left">
                       <div className='row'>
-                        <div className='col-md-9 flexLeft'>
+                        <div className='col-9 flexLeft'>
                           <h5>6 Person Food Crate</h5>
                           <p>Exotic Meats Reserve</p>
                         </div>
-                        <div className='col-md-3 vert flexPrice'>
+                        <div className='col-3 vert flexPrice'>
                           <p className='gothicP'>$79</p>
 
                         </div>
@@ -114,6 +121,40 @@ export class Home extends Component {
 
 
               </div>
+              <div className='col-md-12 bgWhite margin200'>
+                <div className='row'>
+                  <div className='col-md-6 paddingLeft offered flexCenter'>
+
+                    <p>Order hyper authentic fine foods from all over the world.</p>
+                    <div className="greenButton"><img src={order} alt="order" className="ordernow" /></div>
+                    <div className='row margin40'>
+                      <div className='col-md-3 meatCont'>
+                        <img className="meat" src={salami} alt="salami" />
+                      </div>
+                      <div className='col-md-3 meatCont'>
+                        <img className="meat" src={parma} alt='parma' />
+                      </div>  
+                      <div className='col-md-3 meatCont'>
+                        <img className="meat"  src={reggiano} alt='reggiano' />
+                      </div>
+                      <div className='col-md-3 meatCont'>
+                        <img className="meat" src={padano} alt='padano' />
+                      </div>
+                      <div className='col-md-3 meatCont'>
+                        <img className="meat" src={sanmarzano} alt='sanmarzano' />
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+                  <div className='col-md-6 paddingRight offered flexCenter'>
+
+                    <img src={crate} className='crate' alt='food crate' />
+                  </div>
+                </div>
+              </div>  
           
 
           </div>

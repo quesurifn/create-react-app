@@ -1,9 +1,15 @@
 body {
   text-align: center;
-
- background: white;
+  overflow-x: hidden;
+  background: white;
   height: 100vh;
 
+}
+html {
+  overflow-x: hidden;
+}
+.navbar-fixed nav {
+  width:100vw;
 }
 
 .App-logo {
@@ -159,6 +165,72 @@ body {
   border-radius: 2px;
   
 }
+.meat {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 769px) {
+  .selectionButton { 
+    width:100%;
+    
+  }
+  .offered {
+    padding: 0 !important;
+  }
+  .offered p {
+    text-align: center !important;
+    font-size: 25px !important;
+    padding: 0 15px;
+  }
+  .offered .greenButton, .offered .meat {
+    margin: auto;
+    display: block;
+  }
+  .bgWhite.margin200 {
+    margin-top: 40px !important;
+  }
+  .selectionButton {
+    width: 100% !important;
+  }
+  .margin115 {
+  display: none;
+}
+.bgToap {
+  padding: 0 15px 80px 15px;
+
+}
+.crate {
+  display: none;
+}
+.selectionButton h5 {
+  padding-left: 0;
+  font-size: 12px;
+}
+.selectionButton p {
+  padding-left: 0;
+  font-size:11px;
+}
+.flexPrice p {
+  font-size:18px !important;
+}
+.col-9, .col-3, .col-6 {
+  padding: 0 !important;
+}
+.padleft5 {
+  padding-left:5px !important;
+}
+.padright5 {
+  padding-right:5px !important;
+}
+.selectionButton, .flexPrice {
+  height:80px !important;
+}
+.selectionButton {
+  border-radius: 10px;
+}
+
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -299,6 +371,12 @@ hr {
   bottom:40px;
 
 }
+.flexCenter {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
 
 .exit:hover {
   color: gray;
@@ -357,20 +435,41 @@ hr {
   color:white;
   border-radius: 50%;
 }
+
 .leftPercent {
   left: 20%;
 }
 .rightPercent {
   right:20%;
 }
+.bgWhite {
+background: white;
+}
+.paddingLeft {
+  padding-left:100px;
+}
+.meatCont {
+  display: flex;
+}
+.meat {
+  height:100px;
+}
+.offered p {
+  text-align: left;
+  font-size:35px;
+  font-family: 'Lora', serif;
+}
 .margin115 {
-  margin-top:115px;
+  margin-top:115px !important;
+}
+.margin80 {
+  margin-top: 80px !important;
 }
 .full {
   width:100%;
 }
 .margin200 {
-  margin-top:200px;
+  margin-top:200px !important;
 }
 .margin100 {
   margin-top: 100px;
@@ -607,7 +706,8 @@ footer * {
     margin: auto;
   }
   .hide-on-med-and-down p {
-    font-size: 14px !important;
+   font-size: 12px !important;
+    padding-top: 5px;
   }
 }
 /* SLIDER */
