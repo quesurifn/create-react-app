@@ -91,7 +91,7 @@ router.post('/login', function(req, res) {
         console.error('Unable to connect to the database:', err);
       });
     
-      sequelize.query(` SELECT password FROM USERS WHERE EMAIL = ${email}`).spread((results, metadata) => {
+      sequelize.query(`SELECT password FROM USERS WHERE EMAIL = ${email}`).spread((results, metadata) => {
         console.log(results, metadata)
           bcrypt.compare(pw, res, function(err, res) {
               //console.log(err || res)
