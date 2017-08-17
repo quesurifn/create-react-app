@@ -13,7 +13,6 @@ var app = express();
 
 
 app.use(compression({level: 9}))
-app.use(session({ secret: process.env.SECRET, cookie: { maxAge: 600000 }}));
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');

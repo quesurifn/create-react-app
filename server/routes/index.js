@@ -6,7 +6,7 @@ var Sequelize = require('sequelize');
 const sequelize = new Sequelize({dialect:'postgres', url: process.env.DATABASE_URL});
 
 require('dotenv').config()
-console.log(process.env.SENDGRID_KEY)
+//console.log(process.env.SENDGRID_KEY)
 var sg = require('sendgrid')(process.env.SENDGRID_KEY);
 
 
@@ -50,7 +50,7 @@ router.post('/email', function(req, res, next) {
 
        
 }); 
-
+        
 router.post('/register', function(req, res) {
     const email = req.body.email;
     const pw = req.body.password;
@@ -102,16 +102,5 @@ router.post('/login', function(req, res) {
       })
 })
 
-
-       
-
-         
-
-
-
-  
-    
-
-    
 
 module.exports = router;
