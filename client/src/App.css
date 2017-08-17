@@ -701,6 +701,12 @@ small {
 .width100 {
   width: 100%;
 }
+@media screen and (min-width: 769px) {
+  img.acclaimed {
+    height: 150px !important;
+  }
+
+}
 @media screen and (max-width: 1234px) {
   .moreCrates .flexLeft h5 {
     font-size: 13px;

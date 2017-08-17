@@ -70,7 +70,7 @@ export class Foot extends Component {
                 
 
 
-                  <img src={acclaimed} alt="acclaimed" className='responsive-img'/>
+                  <img src={acclaimed} alt="acclaimed" className='responsive-img acclaimed' />
             </div>
         
             <div className="container"> 
