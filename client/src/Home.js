@@ -17,6 +17,8 @@ import reggiano from './images/reggiano.png'
 import padano from './images/padano.png'
 import sanmarzano from './images/sanmarzano.png'
 import meat from './images/meatbg.png'
+import left from './images/tileone.png'
+import right from './images/tile2.png'
 
 export class Home extends Component {
   constructor() {
@@ -169,7 +171,22 @@ export class Home extends Component {
                 <div className='row'>
                   <div className='col-md-12 bgToap plans'>
                     <h2 className="center margin80 width40">Exotic Offerings From Premium Brands</h2>
+                    <div className='row margin80'>
+                      <div className='col-md-6'>
+
+                        <img src={left} className='responsive-img' alt ='left' /> 
+
+
+                      </div>
+                      <div className='col-md-6'>
+
+                        <img src={right}  className='responsive-img' alt ='left' /> 
+
+                        
+                      </div>
+                    </div>
                   </div>
+            
 
                 </div>
                 

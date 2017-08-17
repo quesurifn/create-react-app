@@ -1,8 +1,9 @@
 {
-  "main.css": "static/css/main.1aacc3dc.css",
-  "main.css.map": "static/css/main.1aacc3dc.css.map",
-  "main.js": "static/js/main.8f368748.js",
-  "main.js.map": "static/js/main.8f368748.js.map",
+  "main.css": "static/css/main.664b8cb7.css",
+  "main.css.map": "static/css/main.664b8cb7.css.map",
+  "main.js": "static/js/main.027d0ab2.js",
+  "main.js.map": "static/js/main.027d0ab2.js.map",
+  "static/media/acclaimed.png": "static/media/acclaimed.90885997.png",
   "static/media/box.png": "static/media/box.b4a989f8.png",
   "static/media/boxoffood.png": "static/media/boxoffood.6a0ee1dc.png",
   "static/media/food.jpg": "static/media/food.a550142e.jpg",
@@ -15,5 +16,7 @@
   "static/media/reggiano.png": "static/media/reggiano.35e9283e.png",
   "static/media/salami.png": "static/media/salami.19498dd1.png",
   "static/media/sanmarzano.png": "static/media/sanmarzano.4829f2ab.png",
+  "static/media/tile2.png": "static/media/tile2.41f3ae0e.png",
+  "static/media/tileone.png": "static/media/tileone.05a1bd36.png",
   "static/media/woman.png": "static/media/woman.f4aaf0e9.png"
 }

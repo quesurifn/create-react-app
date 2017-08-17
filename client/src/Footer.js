@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import acclaimed from './images/acclaimed.png'
 
 
 export class Foot extends Component {
@@ -21,7 +21,7 @@ export class Foot extends Component {
                           <p>Olive Sampler</p>
                         </div>
                         <div className='col-3 col-3 vert flexPrice'>
-                          <p className='gothicP'>$36</p>
+                          <p className='gothicP'>$39</p>
 
                         </div>
 
@@ -37,7 +37,7 @@ export class Foot extends Component {
                           <p>Italian Cheese Collection</p>
                         </div>
                         <div className='col-3 col-3 vert flexPrice'>
-                          <p className='gothicP'>$36</p>
+                          <p className='gothicP'>$79</p>
 
                         </div>
 
@@ -53,7 +53,7 @@ export class Foot extends Component {
                           <p>Pepper Mixer</p>
                         </div>
                         <div className='col-3 col-3 vert flexPrice'>
-                          <p className='gothicP'>$36</p>
+                          <p className='gothicP'>$39</p>
 
                         </div>
 
@@ -67,7 +67,10 @@ export class Foot extends Component {
 
             <div className='acclaim'>
                   <p className='center margin80'>&#8220;Food crates actual food is outstanding! It doesn't get any more authentic than this.&#8221;</p>
+                
 
+
+                  <img src={acclaimed} alt="acclaimed" />
             </div>
         
             <div className="container"> 

@@ -163,6 +163,10 @@ html {
   font-family: 'Lora', serif;
   font-size:20px;
 }
+.acclaim img {
+  height: 150px;
+  margin: 50px;
+}
 
 
 .center {
@@ -218,6 +222,9 @@ html {
 .footerHeader {
   font-size:40px;
   font-family: 'Loal', serif;
+}
+.moreCrates .selectionButton:hover {
+  background: #F6EEE1;
 }
 
 
