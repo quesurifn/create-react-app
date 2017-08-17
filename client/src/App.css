@@ -5,6 +5,10 @@ body {
   height: 100vh;
   
 }
+.vert.flexPrice {
+    position: relative;
+    bottom: 1px;
+  }
 html {
   overflow-x: hidden;
 }
@@ -162,8 +166,11 @@ html {
 .moreCrates .gothicP {
   font-size:30px !important;
 }
-.moreCrates .flexLeft, .moreCrates .flexPrice {
-  height: 70px !important; 
+.moreCrates .flexLeft {
+  height: 70px ; 
+}
+.moreCrates .flexPrice {
+  height: 69px;
 }
 .moreCrates .selectionButton {
   height:70px;
@@ -176,7 +183,7 @@ html {
 }
 .acclaim img {
   height: 150px;
-  margin: 50px 0;
+  margin: 80px 0;
 }
 .responsive-img {
   height: auto !important;
@@ -247,6 +254,18 @@ html {
   .selectionButton { 
     width:100%;
     
+  }
+  .moreCrates .flexPrice,   .moreCrates .flexLeft {
+    height: 79px !important;
+  } 
+  .vert.flexPrice {
+    position: relative;
+    bottom: 1px;
+  }
+
+  .authentic {
+    position: relative; 
+    top:20px;
   }
   .moreCrates {
     display: block;

@@ -12,7 +12,7 @@ export class Foot extends Component {
     return (
         <footer>
             <h2 className='center footerHeader'>More Food Crates</h2>
-            <div className='moreCrates margin40'>
+            <div className='moreCrates margin80'>
                  <div className="col-md-3 col-sm-12 LRMargin">
                     <div className="selectionButton right width100">
                       <div className='row'>
@@ -66,7 +66,7 @@ export class Foot extends Component {
             </div>
 
             <div className='acclaim'>
-                  <p className='center margin80'>&#8220;Food crates actual food is outstanding! It doesn't get any more authentic than this.&#8221;</p>
+                  <p className='center margin80 authentic'>&#8220;Food crates actual food is outstanding! It doesn't get any more authentic than this.&#8221;</p>
                 
 
 
@@ -74,7 +74,7 @@ export class Foot extends Component {
             </div>
         
             <div className="container"> 
-            <div className="row margin40">
+            <div className="row">
                 <div className="col-md-3">
                     <p>Company</p>
                     <ul>
