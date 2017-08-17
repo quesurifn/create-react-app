@@ -174,13 +174,13 @@ export class Home extends Component {
                     <div className='row margin80'>
                       <div className='col-md-6'>
 
-                        <img src={left} className='responsive-img' alt ='left' /> 
+                        <img src={left} className='responsive-img width70 right' alt ='left' /> 
 
 
                       </div>
                       <div className='col-md-6'>
 
-                        <img src={right}  className='responsive-img' alt ='left' /> 
+                        <img src={right}  className='responsive-img width70 left' alt ='left' /> 
 
                         
                       </div>

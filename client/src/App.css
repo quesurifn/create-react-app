@@ -44,6 +44,7 @@ html {
   position: relative;
 }
 
+
 .selectionButton {
   width: 80%;
   height: 120px;
@@ -436,7 +437,9 @@ hr {
 
   flex-direction: column;
 }
-
+.plans {
+   padding-bottom:80px !important;
+}
 .exit:hover {
   color: gray;
 }
@@ -444,7 +447,7 @@ hr {
   margin-top: 40px !important;
 }
 .width70 {
-  max-width: 70%;
+  max-width: 70% !important;
 }
 .width40 {
   max-width: 40%;
