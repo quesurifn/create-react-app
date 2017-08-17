@@ -68,6 +68,13 @@ html {
 .selectionButton:hover {
   background: white;
 }
+.padright5 {
+  padding-right:5px;
+  
+}
+.LRMargin {
+  margin: 0 1.5rem;
+}
 .vertLine {
   height:120px;
   width:1px; 
@@ -238,6 +245,12 @@ html {
     width:100%;
     
   }
+  .paddingBottom80 {
+    padding-bottom: 80px !important;
+  }
+  .footer p {
+    text-align: center !important;
+  } 
   .offered {
     padding: 0 !important;
   }
@@ -293,6 +306,9 @@ html {
 .selectionButton {
   border-radius: 10px;
 }
+footer ul li p, footer p {
+    text-align: center !important;
+  } 
 
 }
 @keyframes App-logo-spin {
@@ -685,7 +701,20 @@ small {
 .width100 {
   width: 100%;
 }
-
+@media screen and (max-width: 1234px) {
+  .moreCrates .flexLeft h5 {
+    font-size: 13px;
+    padding: 0;
+    margin: 0 5px;
+  }
+  .moreCrates .gothicP {
+    font-size: 18px !important;
+  }
+  footer .selectionButton p {
+    margin: 0 5px; 
+    padding-left: 0px;
+  }
+}
 
 
 

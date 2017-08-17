@@ -29,7 +29,7 @@ export class Foot extends Component {
                     </div>
 
                   </div>
-                   <div className="col-md-3 padright5">
+                   <div className="col-md-3 LRMargin">
                     <div className="selectionButton right width100">
                       <div className='row'>
                         <div className='col-md-9 flexLeft'>
@@ -45,7 +45,7 @@ export class Foot extends Component {
                     </div>
 
                   </div>
-                   <div className="col-md-3 padright5">
+                   <div className="col-md-3 LRMargin">
                     <div className="selectionButton right width100">
                       <div className='row'>
                         <div className='col-md-9 flexLeft'>

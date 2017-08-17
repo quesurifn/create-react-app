@@ -70,7 +70,7 @@ export class Home extends Component {
           <div style={{ background: '#2D3F52' }}>E</div>
         </Slider>
         <div className="row">
-              <div className="col-12 bgToap">
+              <div className="col-12 bgToap paddingBottom80">
         
                 <h3 className="subheader resfont serif">Save $20 on your first box</h3> 
 
@@ -180,7 +180,7 @@ export class Home extends Component {
                       </div>
                       <div className='col-md-6'>
 
-                        <img src={right}  className='responsive-img width70 left' alt ='left' /> 
+                        <img src={right}  className='responsive-img width70' alt ='left' /> 
 
                         
                       </div>
