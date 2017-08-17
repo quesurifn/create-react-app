@@ -166,7 +166,11 @@ html {
 }
 .acclaim img {
   height: 150px;
-  margin: 50px;
+  margin: 50px 0;
+}
+.responsive-img {
+  height: auto !important;
+  max-width: 100%;
 }
 
 
