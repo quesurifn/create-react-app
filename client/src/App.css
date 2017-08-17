@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
   background: white;
   height: 100vh;
-
+  
 }
 html {
   overflow-x: hidden;
@@ -42,6 +42,9 @@ html {
 }
 .relative {
   position: relative;
+}
+.acclaim, .moreCrates {
+  padding: 0 14px;
 }
 
 
@@ -245,12 +248,13 @@ html {
     width:100%;
     
   }
-  .paddingBottom80 {
-    padding-bottom: 80px !important;
+  .moreCrates {
+    display: block;
   }
-  .footer p {
-    text-align: center !important;
-  } 
+  .paddingBottom80 {
+    padding: 0 14px 80px 14px  !important;
+  }
+
   .offered {
     padding: 0 !important;
   }
@@ -306,9 +310,16 @@ html {
 .selectionButton {
   border-radius: 10px;
 }
-footer ul li p, footer p {
+footer ul li p, footer .container p {
     text-align: center !important;
   } 
+  .moreCrates .selectionButton {
+    margin: 20px auto;
+  }
+  .LRMargin {
+    margin: auto;
+    padding: 0 14px !important;
+  }
 
 }
 @keyframes App-logo-spin {

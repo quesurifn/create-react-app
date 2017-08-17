@@ -13,14 +13,14 @@ export class Foot extends Component {
         <footer>
             <h2 className='center footerHeader'>More Food Crates</h2>
             <div className='moreCrates margin40'>
-                 <div className="col-md-3 padright5">
+                 <div className="col-md-3 col-sm-12 LRMargin">
                     <div className="selectionButton right width100">
                       <div className='row'>
-                        <div className='col-md-9 flexLeft'>
+                        <div className='col-9 flexLeft'>
                           <h5>2 Person Food Crate</h5>
                           <p>Olive Sampler</p>
                         </div>
-                        <div className='col-md-3 vert flexPrice'>
+                        <div className='col-3 vert flexPrice'>
                           <p className='gothicP'>$39</p>
 
                         </div>
@@ -29,14 +29,14 @@ export class Foot extends Component {
                     </div>
 
                   </div>
-                   <div className="col-md-3 LRMargin">
+                   <div className="col-md-3 col-sm-12 LRMargin">
                     <div className="selectionButton right width100">
                       <div className='row'>
-                        <div className='col-md-9 flexLeft'>
+                        <div className='col-9 flexLeft'>
                           <h5>6 Person Food Crate</h5>
                           <p>Italian Cheese Collection</p>
                         </div>
-                        <div className='col-md-3  vert flexPrice'>
+                        <div className='col-3 vert flexPrice'>
                           <p className='gothicP'>$79</p>
 
                         </div>
@@ -45,14 +45,14 @@ export class Foot extends Component {
                     </div>
 
                   </div>
-                   <div className="col-md-3 LRMargin">
+                   <div className="col-md-3 col-sm-12 LRMargin">
                     <div className="selectionButton right width100">
                       <div className='row'>
-                        <div className='col-md-9 flexLeft'>
+                        <div className='col-9 flexLeft'>
                           <h5>2 Person Food Crate</h5>
                           <p>Pepper Mixer</p>
                         </div>
-                        <div className='col-md-3 vert flexPrice'>
+                        <div className='col-3 vert flexPrice'>
                           <p className='gothicP'>$39</p>
 
                         </div>
