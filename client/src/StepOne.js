@@ -15,7 +15,7 @@ import box from './images/boxoffood.png'
   
   return {
     fbkey: store.reducer.fbkey,
-    userSuccess: store.reducer.userSuccess
+    userinfo: store.reducer.userinfo
   }
 })
 export class StepOne extends Component {
@@ -47,7 +47,8 @@ export class StepOne extends Component {
           password: this.refs.loginPassword.value,
           zipcode: this.refs.zipcode.value
         }
-        
+
+        this.props.dispatch(userInfo(obj))
         this.props.history.push('/steptwo')
 
       } else {

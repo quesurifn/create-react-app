@@ -1,7 +1,7 @@
 export function reducer(
     state = {
         fbkey: '',
-        userSuccess: null,
+        userinfo: {}
     }, action) {
 
 
@@ -12,17 +12,11 @@ export function reducer(
                 fbkey: action.payload
             }
           }
-         
-        case "USER_SUCCESS" : {
+        
+        case "USERINFO": {
             return {
                 ...state, 
-                userSuccess: true
-            }
-        }
-        case "USER_ERROR" : {
-            return { 
-                ...state,
-                userSuccess: false
+                userinfo: action.payload
             }
         }
 
