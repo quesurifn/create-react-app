@@ -85,7 +85,7 @@ export class Home extends Component {
                         </div>
                         <div className='col-3 col-3 vert flexPrice'>
                           <p className='gothicP'>$36</p>
-
+        
                         </div>
 
                       </div>
@@ -112,7 +112,7 @@ export class Home extends Component {
                     <p className="center margin40 font18" >Order Before Friday and get it by the weekend</p>
                   </div>
                   <div className="col-md-12">
-                    <div className="greenButton center margin40"><img src={order} alt="order" className="ordernow" /></div>
+                    <div className="greenButton center margin40"><img src={order} alt="order" className="ordernow" onClick={this.startCheckout}/></div>
                   </div>
                   <div className="col-md-6 relative margin115">
                     <img className='woman rightPercent' src={woman} alt="Fresh Delivery Woman" />
@@ -129,7 +129,7 @@ export class Home extends Component {
                   <div className='col-md-6 paddingLeft offered flexCenter'>
 
                     <p>Order hyper authentic fine foods from all over the world.</p>
-                    <div className="greenButton"><img src={order} alt="order" className="ordernow" /></div>
+                    <div className="greenButton"><img src={order} alt="order" className="ordernow"onClick={this.startCheckout} /></div>
                     <div className='row margin40'>
                       <div className='col-md-3 meatCont'>
                         <img className="meat" src={salami} alt="salami" />

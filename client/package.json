@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "bcrypt": "^1.0.2",
+    "card-react": "^1.2.7",
     "crypto": "^1.0.1",
     "history": "^4.6.3",
     "jquery": "^3.2.1",

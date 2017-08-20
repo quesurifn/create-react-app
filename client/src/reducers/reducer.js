@@ -1,7 +1,9 @@
 export function reducer(
     state = {
         fbkey: '',
-        userinfo: {}
+        userinfo: {}, 
+        planinfo: '',
+        checkoutinfo: {}
     }, action) {
 
 
@@ -17,6 +19,19 @@ export function reducer(
             return {
                 ...state, 
                 userinfo: action.payload
+            }
+        }
+
+        case "PLANINFO": {
+            return {
+                ...state,
+                planinfo: action.payload
+            }
+        }
+        case "CHECKOUTINFO": {
+            return {
+                ...state, 
+                checkoutinfo: action.payload
             }
         }
 

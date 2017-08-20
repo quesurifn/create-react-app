@@ -12,7 +12,6 @@ import {Button} from 'react-materialize'
 import box from './images/boxoffood.png'
 
 @connect((store) => {
-  
   return {
     fbkey: store.reducer.fbkey,
     userinfo: store.reducer.userinfo

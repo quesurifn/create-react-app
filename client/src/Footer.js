@@ -113,8 +113,8 @@ export class Foot extends Component {
                 <div className="col-md-3">
                     <p>Follow Us</p>
                     <div className="flexCont">
-                        <div className="grayBox"><i className="fa fa-facebook" aria-hidden="true"></i></div>
-                        <div className="grayBox"><i className="fa fa-twitter" aria-hidden="true"></i></div>
+                        <div className="grayBox"><i className="fa fa-facebook dark" aria-hidden="true"></i></div>
+                        <div className="grayBox"><i className="fa fa-twitter dark" aria-hidden="true"></i></div>
                     </div>
                        
             

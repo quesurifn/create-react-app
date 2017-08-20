@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 export function setFaceBookToken(token) {
     return {
         type: "FBTOKEN",
@@ -10,5 +8,17 @@ export function userInfo(userInfo) {
     return {
         type: "USERINFO",
         payload: userInfo
+    }
+}
+export function planInfo(planInfo) {
+    return {
+        type: "PLANINFO",
+        payload: planInfo
+    }
+}
+export function checkoutInfo(checkoutInfo) {
+    return {
+        type: "CHECKOUTINFO",
+        payload: checkoutInfo
     }
 }
