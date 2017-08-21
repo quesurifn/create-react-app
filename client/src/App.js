@@ -10,6 +10,8 @@ import {StepTwo} from './StepTwo'
 import {Checkout} from './Checkout'
 import {SubHead} from './SubHead'
 
+import {Thankyou} from './Thankyou'
+
 export const App = () => (
   <div>
 
@@ -21,7 +23,8 @@ export const App = () => (
         <Route exact path="/stepone" component={StepOne} />
         <Route exact path="/steptwo" component={StepTwo} />
         <Route exact path="/checkout" component={Checkout} />
-        <Route  component={NotFound} />
+        <Route exact path='/thankyou' component={Thankyou} />
+        <Route  component={NotFound} /> 
       </Switch>
     </main>
 

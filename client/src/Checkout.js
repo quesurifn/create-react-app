@@ -21,6 +21,7 @@ export class Checkout extends Component {
 
 	this.checkout= this.checkout.bind(this);
 	this.computeTax= this.computeTax.bind(this);
+	this.hideAlert = this.hideAlert.bind(this);
 	this.state = {
 		billing: false,
 		selectedShipping: '$0.00', 
@@ -31,11 +32,13 @@ export class Checkout extends Component {
   }
 
   componentDidMount() {
+
 	  let price; 
 	  if (this.props.planinfo.price == undefined) {
-		  price = 0
+		  price = '$0.00'
 	  } else {
-		  price = this.props.planinfo.price
+		  console.log(this.props.planinfo.price)
+		  price = '$' + this.props.planinfo.price
 	  }
 	
 	  this.setState({total: price})
@@ -43,13 +46,27 @@ export class Checkout extends Component {
 
   computeTax() {
 	  if (this.refs.state.value === 'IL') {
-		let tax = parseFloat((this.props.planinfo.price * 0.0625).toFixed(2))
-		let total = (this.state.total + tax).toFixed(2)
-		this.setState({taxAmount: tax, total: total} )
+		  if(this.props.planinfo.price != undefined) {
+
+				console.log(this.props.planinfo.price)
+				let tax = parseFloat((this.props.planinfo.price * 0.0625).toFixed(2))
+				console.log(tax)
+				let total = this.state.total.replace('$', '')
+				total = parseFloat(total) + tax
+				total = total.toFixed(2)
+				this.setState({taxAmount: '$'+tax, total: '$'+total} )
+		  } else {
+				this.refs.message.innerHTML = 'Please add something to your cart.'
+				this.refs.alert.style.display = 'block';
+		  }
+
 	  } 
   }
-
+  hideAlert() {
+	  this.refs.alert.style.display ='none'
+  }
   checkout() {
+	  if(this.props.planinfo.price != undefined) {
 	if (this.refs.email.checkValidity() && this.refs.phone.checkValidity() && this.refs.first.checkValidity() && this.refs.last.checkValidity() &&
 	this.refs.address.checkValidity() && this.refs.city.checkValidity() && this.refs.state.checkValidity() && this.refs.zip.checkValidity() && document.getElementById('ccname').checkValidity() &&
   	document.getElementById('ccmmdd').checkValidity() && document.getElementById('cccvc').checkValidity() && document.getElementById('ccnumber').checkValidity()) {
@@ -57,7 +74,7 @@ export class Checkout extends Component {
 		let orderObj = {
 			email: this.refs.email.value,
 			phone: this.refs.phone.value, 
-			fist: this.refs.first.value, 
+			first: this.refs.first.value, 
 			last: this.refs.last.value, 
 			address: this.refs.address.value, 
 			city: this.refs.city.value, 
@@ -149,6 +166,11 @@ export class Checkout extends Component {
 		} else {
 			console.log('some sort of error happened')
 		}
+	
+	}
+	} else {
+		this.refs.message.innerHTML = 'Please add something to your cart.'
+	    this.refs.alert.style.display = 'block';
 	}
   }
 
@@ -277,6 +299,7 @@ export class Checkout extends Component {
 					<Col s={12} m={3}>
 						<div className='checkoutCard two'>
 							<div className="alert" ref='alert'>
+								<span className="closebtn" onClick={this.hideAlert}>&times;</span> 
 								<div ref='message'></div>
 							</div>
 							<div className='inlineTitle'>
@@ -371,8 +394,8 @@ export class Checkout extends Component {
 											</div>
 											<div className='totals'>
 												<div className='shipping'>Included</div>
-												<div className='tax'>${this.state.taxAmount}</div>
-												<div className='total'>${this.state.total}</div>
+												<div className='tax'>{this.state.taxAmount}</div>
+												<div className='total'>{this.state.total}</div>
 											</div>
 											
 								

@@ -1728,6 +1728,23 @@ label {
 .closebtn:hover {
     color: black;
 }
+  .thankyou {
+    margin: auto;
+    text-align: center;
+  }
+  .thankyou * {
+    font-family: 'Lora', serif;
+  }
+  .thankyou h1 {
+    font-weight: 800;
+    margin-top:120px;
+  }
+  .thankyou h2 {
+    font-size: 25px;
+  }
+  .thankyou h3 {
+    font-size:20px;
+  }
 
 @media screen and (max-width:768px) {
   .planCardContainer {
