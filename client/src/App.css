@@ -1745,6 +1745,13 @@ label {
   .thankyou h3 {
     font-size:20px;
   }
+.onehundred {
+  height:100%;
+  width:100%;
+}
+.bottom80 {
+  margin-bottom: 150px !important;
+}
 
 @media screen and (max-width:768px) {
   .planCardContainer {
@@ -1752,5 +1759,10 @@ label {
   }
   .planCard {
     margin: 40px 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bottom40mobile {
+    margin-bottom:40px !important;
   }
 }

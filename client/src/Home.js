@@ -19,6 +19,7 @@ import sanmarzano from './images/sanmarzano.png'
 import meat from './images/meatbg.png'
 import left from './images/tileone.png'
 import right from './images/tile2.png'
+import meatbg from './images/meatbg.png'
 
 export class Home extends Component {
   constructor() {
@@ -64,10 +65,7 @@ export class Home extends Component {
 
         </div>
       
-          <div style={{ background: '#329ADD' }}>B</div>
-          <div style={{ background: '#9A5CB9' }}>C</div>
-          <div style={{ background: '#E64C3C' }}>D</div>
-          <div style={{ background: '#2D3F52' }}>E</div>
+       
         </Slider>
         <div className="row">
               <div className="col-12 bgToap paddingBottom80">
@@ -125,7 +123,7 @@ export class Home extends Component {
 
               </div>
               <div className='col-md-12 bgWhite margin200'>
-                <div className='row'>
+                <div className='row bottom80'>
                   <div className='col-md-6 paddingLeft offered flexCenter'>
 
                     <p>Order hyper authentic fine foods from all over the world.</p>
@@ -164,7 +162,7 @@ export class Home extends Component {
 
                 <div className="row">
                   <div className='col-12'>
-                    <div className='meatBG'></div>
+                    <img className="onehundred" src={meatbg} alt='meatbg' />
                   </div>
                 </div>
 
@@ -172,7 +170,7 @@ export class Home extends Component {
                   <div className='col-md-12 bgToap plans'>
                     <h2 className="center margin80 width40">Exotic Offerings From Premium Brands</h2>
                     <div className='row margin80'>
-                      <div className='col-md-6'>
+                      <div className='col-md-6 bottom40mobile'>
 
                         <img src={left} className='responsive-img width70 right' alt ='left' /> 
 
