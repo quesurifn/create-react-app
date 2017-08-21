@@ -1752,6 +1752,9 @@ label {
 .bottom80 {
   margin-bottom: 150px !important;
 }
+.white {
+  background: white !important;
+}
 
 @media screen and (max-width:768px) {
   .planCardContainer {
@@ -1759,6 +1762,22 @@ label {
   }
   .planCard {
     margin: 40px 0;
+  }
+}
+@media screen and (max-width:600px) {
+  .flex span {
+    margin-left: 3px;
+    line-height: 60px;
+    font-size: 11px;
+  }
+  .line {
+    width: 10px;
+    margin-left: 5px; 
+    margin-right: 5px;
+  }
+  .badge {
+    padding-top: 7px;
+    align-items: initial;
   }
 }
 @media screen and (max-width: 500px) {
