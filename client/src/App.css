@@ -1755,6 +1755,12 @@ label {
 .white {
   background: white !important;
 }
+.stepTwoTitle {
+  font-size: 25px;
+  font-family: 'Lora', serif;
+  position: relative;
+  top: 40px;
+}
 
 @media screen and (max-width:768px) {
   .planCardContainer {

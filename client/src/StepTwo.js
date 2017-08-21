@@ -27,8 +27,11 @@ export class StepTwo extends Component {
       <div className="App">
         <div className='stepTwo'>
           <Container className='stepTwo'>
+            
             <Row>
+              
               <Col s={12} m={12}>
+              <h1 className='stepTwoTitle'>Select A Plan</h1>
                 <div className='planCardContainer'> 
                   <div className='planCard'>
                     <div className='bgCardOne'></div>
