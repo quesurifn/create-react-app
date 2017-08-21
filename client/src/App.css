@@ -1148,7 +1148,7 @@ footer * {
   padding: 80px 0;
 }
 .checkoutCard {
-  height: 730px !important;
+  height: 760px !important;
   width: 390px !important;
   background: #F6EEE1;
   margin: auto;
@@ -1668,6 +1668,9 @@ label {
   border-radius: 10px;
   margin-top:40px;
 }
+.placeorder:active {
+  background:#F6EEE1;
+}
 .placeorder:hover {
   background:#F6EEE1;
 }
@@ -1677,6 +1680,53 @@ label {
 }
 .checkoutTitle {
   font-family: 'Lora', serif;
+}
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+  /* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    display: none;
+
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
 }
 
 @media screen and (max-width:768px) {

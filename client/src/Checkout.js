@@ -11,7 +11,8 @@ import {checkoutInfo} from './actions/action'
 
 @connect((store) => {
   return {
-    checkoutinfo: store.reducer.checkoutinfo
+	checkoutinfo: store.reducer.checkoutinfo,
+	planinfo: store.reducer.planinfo
   }
 })
 export class Checkout extends Component {
@@ -19,15 +20,39 @@ export class Checkout extends Component {
     super() 
 
 	this.checkout= this.checkout.bind(this);
+	this.computeTax= this.computeTax.bind(this);
 	this.state = {
-		billing: false
+		billing: false,
+		selectedShipping: '$0.00', 
+		tax: false,
+		taxAmount: '$0.00',
+		total: 0
 	}
+  }
+
+  componentDidMount() {
+	  let price; 
+	  if (this.props.planinfo.price == undefined) {
+		  price = 0
+	  } else {
+		  price = this.props.planinfo.price
+	  }
+	
+	  this.setState({total: price})
+  }
+
+  computeTax() {
+	  if (this.refs.state.value === 'IL') {
+		let tax = parseFloat((this.props.planinfo.price * 0.0625).toFixed(2))
+		let total = (this.state.total + tax).toFixed(2)
+		this.setState({taxAmount: tax, total: total} )
+	  } 
   }
 
   checkout() {
 	if (this.refs.email.checkValidity() && this.refs.phone.checkValidity() && this.refs.first.checkValidity() && this.refs.last.checkValidity() &&
-	this.refs.address.checkValidity() && this.refs.city.checkValidity() && this.refs.state.checkValidity() && this.refs.zip.checkValidity() && 
-	this.refs.CCname.checkValidity() && this.refs.CCnumber.checkValidity() && this.refs.CCmmdd.checkValidity() && this.refs.CCcvc.checkValidity()) {
+	this.refs.address.checkValidity() && this.refs.city.checkValidity() && this.refs.state.checkValidity() && this.refs.zip.checkValidity() && document.getElementById('ccname').checkValidity() &&
+  	document.getElementById('ccmmdd').checkValidity() && document.getElementById('cccvc').checkValidity() && document.getElementById('ccnumber').checkValidity()) {
 		
 		let orderObj = {
 			email: this.refs.email.value,
@@ -37,78 +62,90 @@ export class Checkout extends Component {
 			address: this.refs.address.value, 
 			city: this.refs.city.value, 
 			zip: this.refs.zip.value, 
-			ccname: this.refs.CCname.value,
-			cccvc: this.refs.CCcvc.value,
-			ccmmdd: this.refs.CCmmdd.value,
-			cccvc: this.refs.CCcvc.value
+			ccname: document.getElementById('ccname').value,
+			cccvc: document.getElementById('cccvc').value,
+			ccmmdd: document.getElementById('ccmmdd').value,
+			ccname: document.getElementById('ccname').value
 		}
 
 		this.props.dispatch(checkoutInfo(orderObj))
 		this.props.history.push('/thankyou')
 
 	} else {
+		console.log(this.refs.alert)
 		
 		if (!this.refs.email.checkValidity()) {
 			this.refs.email.style.outline = '1px solid #ff2a4a4'
-			if ( window.innerWidth < 500) {
-				location.hash = 'email'
-
-			}
+		
+			console.log('email')
+			this.refs.message.innerHTML = 'Please Check your billing information.'
+			this.refs.alert.style.display = 'block';
 		} else if (!this.refs.phone.checkValidity()) {
 			this.refs.phone.style.outline = '1px solid #ff2a4a4'
-			if ( window.innerWidth < 500) {
-				location.hash = 'phone'
-			}
+			
+			console.log('phone')
+			this.refs.alert.style.display = 'block';
+			this.refs.message.innerHTML = 'Please Check your billing information.'
 		} else if (!this.refs.first.checkValidity()) {
 			this.refs.first.style.outline = '1px solid #ff2a4a4'
-			if ( window.innerWidth < 500) {
-				location.hash = 'first'
-			}
+		
+			console.log('first')
+			this.refs.message.innerHTML = 'Please Check your billing information.'
+			this.refs.alert.style.display = 'block';
 		} else if (!this.refs.last.checkValidity()) {
 			this.refs.last.style.outline = '1px solid #ff2a4a4'
-			if ( window.innerWidth < 500) {
-				location.hash = 'last'
-			}
+			
+			console.log('last')
+			this.refs.message.innerHTML = 'Please Check your billing information.'
+			this.refs.alert.style.display = 'block';
 		} else if (!this.refs.address.checkValidity()) {
 			this.refs.address.style.outline = '1px solid #ff2a4a4'
-			if ( window.innerWidth < 500) {
-				location.hash = 'address'
-			}
+			
+			console.log('address')
+			this.refs.message.innerHTML = 'Please Check your billing information.'
+			this.refs.alert.style.display = 'block';
 		} else if (!this.refs.city.checkValidity()) {
 			this.refs.city.style.outline = '1px solid #ff2a4a4'
-			if ( window.innerWidth < 500) {
-				location.hash = 'city'
-			}
+			
+			console.log('city')
+			this.refs.message.innerHTML = 'Please Check your billing information.'
+			this.refs.alert.style.display = 'block';
 		} else if (!this.refs.state.checkValidity()) {
 			this.refs.state.style.outline = '1px solid #ff2a4a4'
-			if ( window.innerWidth < 500) {
-				location.hash = 'state'
-			}
+			
+			console.log('state')
+			this.refs.message.innerHTML = 'Please Check your billing information.'
+			this.refs.alert.style.display = 'block';
 		} else if (!this.refs.zip.checkValidity()) {
 			this.refs.zip.style.outline =  '1px solid #ff2a414'
-			if ( window.innerWidth < 500) {
-				location.hash = 'zip'
-			}
+			
+			console.log('zip')
+			this.refs.message.innerHTML = 'Please Check your billing information.'
+			this.refs.alert.style.display = 'block';
 		} else if (!this.refs.CCname.checkValidity()) {
 			this.refs.CCname.style.outline = '1px solid #ff2a4a4'
-			if ( window.innerWidth < 500) {
-				location.hash = 'ccname'
-			}
+			
+			console.log('ccname')
+			this.refs.message.innerHTML = 'Please Check your billing information.'
+			this.refs.alert.style.display = 'block';
 		} else if (!this.refs.CCnumber.checkValidity()) {
 			this.refs.CCnumber.style.outline = '1px solid #ff2a4a4'
-			if ( window.innerWidth < 500) {
-				location.hash = 'ccnumber'
-			}
+			
+			console.log('ccnumber')
+			this.refs.message.innerHTML = 'Please Check your billing information.'
+			this.refs.alert.style.display = 'block';
 		} else if (!this.refs.CCmmdd.checkValidity()) {
 			this.refs.CCmmdd.style.outline = '1px solid #ff2a4a4'
-			if ( window.innerWidth < 500) {
-				location.hash = 'ccmmdd'
-			}
+			
+			console.log('ccmmdd')
+			this.refs.message.innerHTML = 'Please Check your billing information.'
+			this.refs.alert.style.display = 'block';
 		} else if (!this.refs.CCcvc.checkValidity()) {
 			this.refs.CCcvc.style.outline = '1px solid #ff2a4a4'
-			if ( window.innerWidth < 500) {
-				location.hash = 'cccvc'
-			}
+			
+			console.log('ccvc')
+			this.refs.message.innerHTML = 'Please Check your billing information.'
+			this.refs.alert.style.display = 'block';
 		} else {
 			console.log('some sort of error happened')
 		}
@@ -121,7 +158,7 @@ export class Checkout extends Component {
   render() {
 	  let standard = '$8.98'
 	  let expedited = '$12.98'
-
+	  
     return (
         <div className="App"> 
 			
@@ -143,17 +180,17 @@ export class Checkout extends Component {
 									<input ref='email' className="form-text" type="email" id='email' placeholder="Enter email" required />
 								</div>
 								<div className="form-container"> 
-									<input ref="phone" className="form-text" type="tel" id='phone' pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="847-222-5555" required />
+									<input ref="phone" className="form-text" type="tel" id='phone' placeholder="847-222-5555" required />
 								</div>
 								<hr />
 
 								<h3 className='shippingTitle'>Shipping Address</h3>
 								<div className='form-inline'>
 									<div className="form-container"> 
-										<input ref='first' id='first' className="form-text" type="text" placeholder="First Name" pattern="[a-zA-Z]" required />
+										<input ref='first' id='first' className="form-text" type="text" placeholder="First Name" required />
 									</div>
 									<div className="form-container"> 
-										<input ref='last' id='last' className="form-text" type="text" placeholder="Last Name" pattern="[a-zA-Z]" required />
+										<input ref='last' id='last' className="form-text" type="text" placeholder="Last Name"  required />
 									</div>
 								</div>
 								<div className="form-container"> 
@@ -166,7 +203,7 @@ export class Checkout extends Component {
 									<div className="form-container"> 
 										<input ref='city' id='city' className="form-text" type="text" placeholder="City"  pattern="[a-zA-z]{2,}"  required />
 									</div>
-									<select name="state" ref='state' id='state' required>
+									<select name="state" ref='state' id='state' onChange={this.computeTax} required>
 										<option value="">Select State</option>
 										<option value="AL">Alabama</option>
 										<option value="AK">Alaska</option>
@@ -239,21 +276,15 @@ export class Checkout extends Component {
 
 					<Col s={12} m={3}>
 						<div className='checkoutCard two'>
+							<div className="alert" ref='alert'>
+								<div ref='message'></div>
+							</div>
 							<div className='inlineTitle'>
 								<div className='checkoutBadge'>
 									<span>2</span>
 								</div>
-								<span className='span2'>SHIPPING &amp; PAYMENT</span>
-							</div>
-							<div className='shipping'> 
-								<label>
-									<input type='radio' name='shipping'/>
-									Standard: {standard}
-								</label>
-								<label>
-									<input type='radio' name='shipping'/>
-									Expedited: {expedited}
-								</label>
+								<span className='span2'>PAYMENT</span>
+						
 							</div>
 							<hr />
 							<div className='cardContainer'>
@@ -274,15 +305,6 @@ export class Checkout extends Component {
 						}
 					}
 					
-					// initial values to render in the card element
-					initialValues= {
-						{
-						number: '4242424242424242', // optional — default •••• •••• •••• ••••
-						cvc: '123', // optional — default •••
-						expiry: '16/12', // optional — default ••/••
-						name: 'Random Name' // optional — default FULL NAME
-						}
-					}
 					
 					// the class name attribute to add to the input field and the corresponding part of the card element,
 					// when the input is valid/invalid.
@@ -299,17 +321,17 @@ export class Checkout extends Component {
 					
 					<form>
 						<div className="form-container"> 
-							<input ref='CCname' id='ccname' placeholder="Full name" type="text" name="CCname" required/>
+							<input ref='ccname' id='ccname' placeholder="Full name" type="text" name="CCname" required/>
 						</div>
 						<div className="form-container"> 
-							<input ref='CCnumber' id='ccnumber' placeholder="Card number" type="text" name="CCnumber" required/>
+							<input ref='ccnumber' id='ccnumber' placeholder="Card number" type="text" name="CCnumber" required/>
 						</div>
 						<div className='form-inline'>
 							<div className="form-container"> 
-								<input ref='CCmmdd' id='ccmmdd' placeholder="MM/YY" type="text" name="CCexpiry" required/>
+								<input ref='ccmmdd' id='ccmmdd' placeholder="MM/YY" type="text" name="CCexpiry" required/>
 							</div>
 							<div className="form-container"> 
-								<input ref='CCcvc' id='cccvc' placeholder="CVC" type="text" name="CCcvc" required/>
+								<input ref='cccvc' id='cccvc' placeholder="CVC" type="text" name="CCcvc" required/>
 							</div>
 						</div>
 					</form>
@@ -348,9 +370,9 @@ export class Checkout extends Component {
 												<div className='total'>Total:</div>
 											</div>
 											<div className='totals'>
-												<div className='shipping'>$SELECTED SHIPPING</div>
-												<div className='tax'>$TAX</div>
-												<div className='total'>$TOTAL</div>
+												<div className='shipping'>Included</div>
+												<div className='tax'>${this.state.taxAmount}</div>
+												<div className='total'>${this.state.total}</div>
 											</div>
 											
 								
