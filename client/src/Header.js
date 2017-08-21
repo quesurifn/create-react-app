@@ -9,7 +9,9 @@ export class Header extends Component {
         this.hideBanner = this.hideBanner.bind(this);
     }
     componentDidMount() {
+        if (document.location.pathname === '/steptwo') {
          document.querySelector('nav').setAttribute('class', 'white')
+        }
     }
 
     hideBanner() {

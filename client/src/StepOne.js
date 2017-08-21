@@ -76,7 +76,9 @@ export class StepOne extends Component {
     
     return (
       <div className="container">
+         <h1 className="stepOneTitle">Create an Account</h1>
         <div className="row">
+         
    
           <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
           
