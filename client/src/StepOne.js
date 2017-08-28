@@ -34,9 +34,6 @@ export class StepOne extends Component {
       }
     }
     
-    componentWillUpdate(nextProps) {
-      console.log(nextProps)
-    }
     
     stepTwo() {
       if(this.refs.loginEmail.checkValidity() && this.refs.loginPassword.checkValidity() && this.refs.zipcode.checkValidity()) {
@@ -67,7 +64,6 @@ export class StepOne extends Component {
 
   render() {
     const responseFacebook = (response) => {
- 
       this.props.dispatch(setFaceBookToken(response))
     }
 

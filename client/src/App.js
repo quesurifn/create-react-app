@@ -9,6 +9,7 @@ import {StepOne} from './StepOne'
 import {StepTwo} from './StepTwo'
 import {Checkout} from './Checkout'
 import {SubHead} from './SubHead'
+import  {Product} from './Product'
 
 import {Thankyou} from './Thankyou'
 
@@ -24,7 +25,8 @@ export const App = () => (
         <Route exact path="/steptwo" component={StepTwo} />
         <Route exact path="/checkout" component={Checkout} />
         <Route exact path='/thankyou' component={Thankyou} />
-        <Route  component={NotFound} /> 
+        <Route path='/crates/:crate'  component={Product} />
+        <Route  component={NotFound} />
       </Switch>
     </main>
 
@@ -32,3 +34,4 @@ export const App = () => (
 
   </div>
 )
+
