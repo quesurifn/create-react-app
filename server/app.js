@@ -18,6 +18,11 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use(logger('dev'));
 
+app.use(function(req, res, next) {
+ res.setHeader('Cache-Control', 'no-cache');
+ next();
+});
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -28,17 +33,12 @@ app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.use('/api', index);
 
+app.get('*', function(req, res) {
+  res.sendFile(__dirname + '../client/build/index.html');
+})
+
 //To prevent errors from Cross Origin Resource Sharing, we will set 
 //our headers to allow CORS with middleware like so:
-app.use(function(req, res, next) {
- res.setHeader('Access-Control-Allow-Origin', '*');
- res.setHeader('Access-Control-Allow-Credentials', 'true');
- res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
- res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
-//and remove cacheing so we get the most recent comments
- res.setHeader('Cache-Control', 'no-cache');
- next();
-});
 
 
 // catch 404 and forward to error handler
@@ -56,7 +56,7 @@ app.use(function(err, req, res, next) {
   console.error(err)
   // render the error page
   res.status(err.status || 500);
-  res.send('ERROR: ', err.message)
+  res.send(err.message)
 });
 
 process.on('uncaughtException', function (err) {
