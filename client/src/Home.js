@@ -24,6 +24,9 @@ import meatbg from './images/meatbg.png'
 
 
 import heroLogo from './images/antipasto-box-logo.png'
+import hero2Logo from './images/slider2-text1.png'
+import slide2text from './images/slider2-text2.png'
+import slide2text3 from './images/slide2-text3.png'
 
 import {Row, Col} from 'react-materialize'
 
@@ -35,6 +38,10 @@ export class Home extends Component {
     super() 
     this.startCheckout= this.startCheckout.bind(this);
   }
+   componentDidMount() {
+       console.log('fired')
+       window.scrollTop = 0;
+    }    
 
   startCheckout() {
     this.props.history.push('/stepone')
@@ -44,30 +51,31 @@ export class Home extends Component {
    
     return (
       <div className="App">
-        <Row>
-          <Col s={12}>
-            <div className="gallery autoplay items-2">
-                <div id="item-1" className="control-operator"></div>
-                <div id="item-2" className="control-operator"></div>
-                <div id="item-3" className="control-operator"></div>
+        
+            <div className="gallery items-2">
+                <div id="antipasto" className="control-operator"></div>
+                <div id="real" className="control-operator"></div>
+             
 
                 <figure className="item slideOne">
                   <img src={heroLogo} alt='Hero Logo' />
+           
                 </figure>
 
                 <figure className="item slideTwo">
-                
+                  <img src={hero2Logo} alt='Hero 2 logo' />
+                  <img src={slide2text} alt='Hero 2 text 2' />
+                  <img src={slide2text3} alt='Hero 2 text 3' />
                 </figure>
 
               
 
                 <div className="controls">
                   <a href="#antipasto" className="control-button">•</a>
-                  <a href="#real-italian" className="control-button">•</a>
+                  <a href="#real" className="control-button">•</a>
                 </div>
               </div>
-          </Col>
-        </Row>
+       
       
         
 

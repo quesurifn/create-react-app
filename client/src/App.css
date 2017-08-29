@@ -1,17 +1,20 @@
 body {
   text-align: center;
-  overflow-x: hidden;
   background: white;
   height: 100vh;
   
+}
+html {
+  overflow-x: hidden;
+}
+.ordernow {
+  cursor: pointer !important;
 }
 .vert.flexPrice {
     position: relative;
     bottom: 1px;
   }
-html {
-  overflow-x: hidden;
-}
+
 .navbar-fixed nav {
   width:100vw;
 }
@@ -61,6 +64,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer !important;
 
 }
 .selectionButton h5 , .selectionButton p{
@@ -1779,10 +1783,63 @@ label {
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
+.slideOne img:first-child {
+  width: 40%;
+  
+}
+.slideTwo img:first-child {
+  max-width: 100%;
+  width: 30%;
+  position: relative;
+  top: 40px;
+}
+.slideTwo img:nth-child(2) {
+  max-width: 100%;
+  width:30%;
+  position: relative;
+  top: 60px;
+}
+.slideTwo img:last-child {
+  max-width: 100%;
+  width: 30%;
+  position: absolute;
+  bottom: 8vh;
+}
 .item {
   margin: 0 !important;
 }
 
+@media screen and (max-width: 1400px) {
+  .slideTwo img:first-child, .slideTwo img:nth-child(2) {
+    width: 35% !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .slideTwo img:first-child, .slideTwo img:nth-child(2) {
+    width: 45% !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .slideTwo img:first-child, .slideTwo img:nth-child(2) {
+    width: 55% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .slideTwo img:first-child, .slideTwo img:nth-child(2) {
+    width: 75% !important;
+  }
+  .slideTwo img:last-child {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .slideTwo img:first-child, .slideTwo img:nth-child(2) {
+    width: 85% !important;
+  }
+  .slideTwo img:last-child {
+    width: 60%;
+  }
+}
 @media screen and (max-width:768px) {
   .planCardContainer {
     flex-direction: column;

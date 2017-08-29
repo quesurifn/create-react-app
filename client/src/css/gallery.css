@@ -13,12 +13,17 @@
 */
 .gallery {
   position: relative;
-  height: 110vh;
+  height: calc(100vh - 65px );
 }
 .gallery .item {
-  height: 110vh;
+  height: calc(100vh - 65px );
   overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
 }
 .gallery .controls {
   position: absolute;

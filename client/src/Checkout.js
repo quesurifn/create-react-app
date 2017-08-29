@@ -32,7 +32,11 @@ export class Checkout extends Component {
   }
 
   componentDidMount() {
-
+	  var element = document.querySelector("html"); 
+      console.log(element)
+      element.style.overflowX = 'scroll'
+      window.scroll(0,0)
+      element.style.overflowX = 'hidden'
 	  let price; 
 	  if (this.props.planinfo.price == undefined) {
 		  price = '$0.00'
@@ -42,6 +46,8 @@ export class Checkout extends Component {
 	  }
 	
 	  this.setState({total: price})
+
+	
   }
 
   computeTax() {

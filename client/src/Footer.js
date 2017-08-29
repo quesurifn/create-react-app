@@ -2,8 +2,39 @@ import React, { Component } from 'react';
 import './App.css';
 import acclaimed from './images/acclaimed.png'
 
+import {connect} from 'react-redux'
+import {addToCart} from './actions/action'
 
+
+import AlertContainer from 'react-alert'
+
+
+
+@connect((store) => {
+  return {
+    cart: store.reducer.cart
+  }
+})
 export class Foot extends Component {
+  constructor() {
+    super() 
+
+
+    this.addToCartComp = this.addToCartComp.bind(this)
+  }
+
+
+  addToCartComp(obj) {
+    this.props.dispatch(addToCart(obj))
+    this.msg.show(`Added ${obj.name} To Cart!`, {
+          time: 3000,
+          type: 'success',
+          offset: 14,
+          position: 'top left',
+          theme: 'dark',
+          transition: 'scale'
+    })
+  }
   
 
 
@@ -11,10 +42,11 @@ export class Foot extends Component {
 
     return (
         <footer>
+            <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
             <h2 className='center footerHeader'>More Food Crates</h2>
             <div className='moreCrates margin80'>
                  <div className="col-md-3 col-sm-12 LRMargin">
-                    <div className="selectionButton right width100">
+                    <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Olive Sampler", "price": 39, q: 1})}>
                       <div className='row'>
                         <div className='col-9 flexLeft'>
                           <h5>2 Person Food Crate</h5>
@@ -30,7 +62,7 @@ export class Foot extends Component {
 
                   </div>
                    <div className="col-md-3 col-sm-12 LRMargin">
-                    <div className="selectionButton right width100">
+                    <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Italian Cheese Collection", "price": 79, q: 1})}>
                       <div className='row'>
                         <div className='col-9 flexLeft'>
                           <h5>6 Person Food Crate</h5>
@@ -46,7 +78,7 @@ export class Foot extends Component {
 
                   </div>
                    <div className="col-md-3 col-sm-12 LRMargin">
-                    <div className="selectionButton right width100">
+                    <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Pepper Mixer", "price": 39, q: 1})}>
                       <div className='row'>
                         <div className='col-9 flexLeft'>
                           <h5>2 Person Food Crate</h5>
@@ -123,7 +155,7 @@ export class Foot extends Component {
                 <p>Incredible Deals on Local Experiences</p>
                 <small>Discover fun activities and huge discounts in your city with Groupon. Check out great deals on things to do from kids activities to nightlife; try out new restaurants, spas, massages and hair salons near you, or plan a trip away from home.</small>
                 <div className="flexCont2">
-                    <p>2017 &copy; Food Containers Inc. All Rights Reserved.</p>
+                    <p>2017 &copy; Food Crates Inc. All Rights Reserved.</p>
                     <a>Terms Of Use</a>
                     <a>Privacy Statement</a>
                     <a>Licenses</a> 

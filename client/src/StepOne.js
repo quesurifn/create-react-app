@@ -23,6 +23,16 @@ export class StepOne extends Component {
     this.isItValid = this.isItValid.bind(this)
     this.stepTwo = this.stepTwo.bind(this)
   }
+
+  componentDidMount() {
+      var element = document.querySelector("html"); 
+      console.log(element)
+      element.style.overflowX = 'scroll'
+      window.scroll(0,0)
+      element.style.overflowX = 'hidden'
+
+    }    
+
     
 
     isItValid(e) {

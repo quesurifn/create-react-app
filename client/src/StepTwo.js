@@ -20,6 +20,16 @@ export class StepTwo extends Component {
     this.props.dispatch(planInfo(plan))
     this.props.history.push('/checkout')
   }
+   componentDidMount() {
+      var element = document.querySelector("html"); 
+      console.log(element)
+      element.style.overflowX = 'scroll'
+      window.scroll(0,0)
+      element.style.overflowX = 'hidden'
+
+    }    
+ 
+
 
 
   render() {

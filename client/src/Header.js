@@ -12,7 +12,10 @@ export class Header extends Component {
         if (document.location.pathname === '/steptwo') {
          document.querySelector('nav').setAttribute('class', 'white')
         }
+       
     }
+    
+     
 
     hideBanner() {
         this.refs.banner.display = "none"

@@ -12,26 +12,29 @@ import {SubHead} from './SubHead'
 import  {Product} from './Product'
 
 import {Thankyou} from './Thankyou'
+import {ScrollToTop} from './ScrollToTop'
 
 export const App = () => (
   <div>
 
-    <Header />
-    {/* <SubHead /> */}
-    <main>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/stepone" component={StepOne} />
-        <Route exact path="/steptwo" component={StepTwo} />
-        <Route exact path="/checkout" component={Checkout} />
-        <Route exact path='/thankyou' component={Thankyou} />
-        <Route path='/crates/:crate'  component={Product} />
-        <Route  component={NotFound} />
-      </Switch>
-    </main>
+        <Header />
+        {/* <SubHead /> */}
+          
+            <main>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/stepone" component={StepOne} />
+                <Route exact path="/steptwo" component={StepTwo} />
+                <Route exact path="/checkout" component={Checkout} />
+                <Route exact path='/thankyou' component={Thankyou} />
+                <Route path='/crates/:crate'  component={Product} />
+                <Route  component={NotFound} />
+              </Switch>
+            </main>
 
-    <Foot />
+        <Foot />
+    
 
-  </div>
+      </div>
 )
 

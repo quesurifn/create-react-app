@@ -22,3 +22,9 @@ export function checkoutInfo(checkoutInfo) {
         payload: checkoutInfo
     }
 }
+export function addToCart(obj) {
+    return {
+        type: "ADDTOCART",
+        payload: obj
+    }
+}
