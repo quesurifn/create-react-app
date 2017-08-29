@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './css/gallery.css'
 
+import {Link} from 'react-router-dom'
 
 import {connect} from 'react-redux'
 import Background from './images/food.jpg'
@@ -27,6 +28,9 @@ import heroLogo from './images/antipasto-box-logo.png'
 import hero2Logo from './images/slider2-text1.png'
 import slide2text from './images/slider2-text2.png'
 import slide2text3 from './images/slide2-text3.png'
+import slider1text1 from './images/slider-1-message.png'
+
+import foodCratesLogo from './images/food-crates-logo.png'
 
 import {Row, Col} from 'react-materialize'
 import {addToCart} from './actions/action'
@@ -81,8 +85,11 @@ export class Home extends Component {
              
 
                 <figure className="item slideOne">
-                  <img src={heroLogo} alt='Hero Logo' />
-           
+                   <img src={foodCratesLogo} className='firstChildSlideOne' alt='logo' />
+                   <img src={heroLogo} alt='Hero Logo' />
+                   <img src={slider1text1} alt='branding message' />
+                   <div className="greenButton center margin40" onClick={this.startCheckout}><img src={order} alt="order" className="ordernow" /></div>
+                   <p>Get the good stuff, no middlemen.</p>
                 </figure>
 
                 <figure className="item slideTwo">

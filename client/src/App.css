@@ -117,6 +117,7 @@ body {
   justify-content: center;
   width: 150px;
   height: 50px;
+  text-decoration: none;
 }
 .greenButton:hover {
   opacity: 0.7;
@@ -1808,7 +1809,31 @@ label {
 .item {
   margin: 0 !important;
 }
+.firstChildSlideOne{
+  width: 200px !important;
+  position: relative;
+  margin-top: 20px
+}
+.slideOne img:nth-child(2) {
+  width: 700px;
+  max-width: 100%;
+  position: relative;
+  margin-top: 40px;
+}
+.slideOne img:nth-child(3) {
+  width: 500px;
+  max-width: 100%;
+  position: relative;
+  margin-top: 40px;
+}
+.slideOne .greenButton {
 
+  margin: 40px auto !important;
+}
+.slideOne p {
+  color:white;
+  font-weight: 200;
+}
 @media screen and (max-width: 1400px) {
   .slideTwo img:first-child, .slideTwo img:nth-child(2) {
     width: 35% !important;
@@ -1846,6 +1871,9 @@ label {
   }
   .planCard {
     margin: 40px 0;
+  }
+  .plans div img {
+    float: initial !important;
   }
 }
 @media screen and (max-width:600px) {
