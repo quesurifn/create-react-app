@@ -70,7 +70,7 @@ export class Home extends Component {
           theme: 'dark',
           transition: 'scale'
     })
-    this.props.history.push('/checkout')
+
   }
   
 
@@ -79,7 +79,7 @@ export class Home extends Component {
     return (
       <div className="App">
         <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
-            <div className="gallery items-2">
+            <div className="gallery autoplay items-2">
                 <div id="antipasto" className="control-operator"></div>
                 <div id="real" className="control-operator"></div>
              

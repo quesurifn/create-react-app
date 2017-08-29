@@ -12,7 +12,8 @@ import {checkoutInfo} from './actions/action'
 @connect((store) => {
   return {
 	checkoutinfo: store.reducer.checkoutinfo,
-	planinfo: store.reducer.planinfo
+	planinfo: store.reducer.planinfo,
+	cart: store.reducer.cart
   }
 })
 export class Checkout extends Component {
@@ -36,23 +37,12 @@ export class Checkout extends Component {
       console.log(element)
       element.style.overflowX = 'scroll'
       window.scroll(0,0)
-      element.style.overflowX = 'hidden'
-	  let price; 
-	  if (this.props.planinfo.price == undefined) {
-		  price = '$0.00'
-	  } else {
-		  console.log(this.props.planinfo.price)
-		  price = '$' + this.props.planinfo.price
-	  }
-	
-	  this.setState({total: price})
-
-	
+	  element.style.overflowX = 'hidden'
   }
 
   computeTax() {
 	  if (this.refs.state.value === 'IL') {
-		  if(this.props.planinfo.price != undefined) {
+		  if(this.props.planinfo.price !== undefined) {
 
 				console.log(this.props.planinfo.price)
 				let tax = parseFloat((this.props.planinfo.price * 0.0625).toFixed(2))
@@ -72,11 +62,11 @@ export class Checkout extends Component {
 	  this.refs.alert.style.display ='none'
   }
   checkout() {
-	  if(this.props.planinfo.price != undefined) {
-	if (this.refs.email.checkValidity() && this.refs.phone.checkValidity() && this.refs.first.checkValidity() && this.refs.last.checkValidity() &&
-	this.refs.address.checkValidity() && this.refs.city.checkValidity() && this.refs.state.checkValidity() && this.refs.zip.checkValidity() && document.getElementById('ccname').checkValidity() &&
-  	document.getElementById('ccmmdd').checkValidity() && document.getElementById('cccvc').checkValidity() && document.getElementById('ccnumber').checkValidity()) {
-		
+		if(this.props.planinfo !== undefined || this.props.cart.length !== 0) {
+					if (this.refs.email.checkValidity() && this.refs.phone.checkValidity() && this.refs.first.checkValidity() && this.refs.last.checkValidity() &&
+					this.refs.address.checkValidity() && this.refs.city.checkValidity() && this.refs.state.checkValidity() && this.refs.zip.checkValidity() && document.getElementById('ccname').checkValidity() &&
+					document.getElementById('ccmmdd').checkValidity() && document.getElementById('cccvc').checkValidity() && document.getElementById('ccnumber').checkValidity()) {
+						
 		let orderObj = {
 			email: this.refs.email.value,
 			phone: this.refs.phone.value, 
@@ -187,6 +177,33 @@ export class Checkout extends Component {
 	  let standard = '$8.98'
 	  let expedited = '$12.98'
 	  
+	  let plan;
+	  let items;
+
+
+	  try {
+
+		if (this.props.planinfo !== '' && this.props.planinfo !== undefined) {
+			let info = this.props.planinfo
+			plan = <p><b>{info.plan}</b> <i>5 meals weekly</i> <b>${info.price}</b></p>
+		} else {
+			plan = <p>No plans selected today</p>
+		}
+
+		if (this.props.cart.length !== 0) {
+			items = this.props.cart.map(e =>{
+				return <li><li><p><b>{e.name}</b> <i>Feeds 6</i> <b>${e.price}</b>  #{e.q}</p></li></li>
+			})
+		} else {
+			items = <p>No items selected today</p>
+		}
+
+
+	  } catch (e) {
+		  console.log(e)
+	  }
+
+
     return (
         <div className="App"> 
 			
@@ -380,23 +397,30 @@ export class Checkout extends Component {
 								<span className='span2'>CONFIRM</span>
 							</div>
 							<div className='checkoutContainer'>
-								<div className="shopify-buy__cart-items">
-									<div className="shopify-buy__cart-item itemContainer">	
-										<div className='someContainer'>
-											<div className="shopify-buy__cart-item__image itemImage" alt="Product"></div>
-												<span className="shopify-buy__cart-item__title" ></span>
-											
-												<span className="shopify-buy__cart-item__price"></span>
-											
-											</div>
-										</div>
-									</div>
+								<h2>Plan Selection</h2>
+
+								
+									{plan}
+
+
+
+								<h2>A la cart</h2>
+
+								<ul>
+									
+									{items}
+	
+
+
+
+								</ul>
+							</div>
 									<div className='totalBox'>
 								
 											<div  className='totalNames' >
 												<div className='shipping'>Shipping:</div>
 												<div className='tax'>Tax:</div>
-												<div className='total'>Total:</div>
+												<div className='total'>Total Due Today:</div>
 											</div>
 											<div className='totals'>
 												<div className='shipping'>Included</div>
@@ -410,7 +434,7 @@ export class Checkout extends Component {
 									
 								</div>
 								
-							</div>
+					
 								
 					</Col>
 

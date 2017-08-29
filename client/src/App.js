@@ -31,8 +31,8 @@ export const App = () => (
                 <Route  component={NotFound} />
               </Switch>
             </main>
-
-        <Foot />
+         <Foot />
+       
     
 
       </div>

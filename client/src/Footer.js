@@ -4,12 +4,12 @@ import acclaimed from './images/acclaimed.png'
 
 import {connect} from 'react-redux'
 import {addToCart} from './actions/action'
-
+import { withRouter } from 'react-router';
 
 import AlertContainer from 'react-alert'
 
 
-
+@withRouter
 @connect((store) => {
   return {
     cart: store.reducer.cart
@@ -21,6 +21,9 @@ export class Foot extends Component {
 
 
     this.addToCartComp = this.addToCartComp.bind(this)
+  }
+  componentDidMount() {
+    console.log(this.props)
   }
 
 
@@ -34,7 +37,7 @@ export class Foot extends Component {
           theme: 'dark',
           transition: 'scale'
     })
-    this.props.history.push('/checkout')
+  
   }
   
 

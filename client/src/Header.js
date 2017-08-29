@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Navbar} from 'react-materialize'
+import {Link} from 'react-router-dom'
 
 
 export class Header extends Component {
@@ -31,7 +32,7 @@ export class Header extends Component {
     } else if (document.location.pathname === '/stepthree') {
         header = <div className="flex"><div className="badge"><i className="fa fa-check" aria-hidden="true"></i></div><span>Welcome</span> <div className="line"></div><div className="badgeNoFill"> 2 </div><span>Plans &amp; Preferences</span><div className="line"></div><div className="badgeNoFill"><i className="fa fa-check" aria-hidden="true"></i></div><span>Checkout</span></div>
     } else {
-        header =  <p>Try Food Crates New Antipasto Box Today and Save $20</p>
+        header =  <div className="width100Special"><p>Try Food Crates New Antipasto Box Today and Save $20</p><Link to='checkout' className='special'>CHECKOUT</Link></div>
     }
     return (
       <div className='row'>

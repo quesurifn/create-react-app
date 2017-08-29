@@ -1680,7 +1680,7 @@ label {
   background:#F6EEE1;
 }
 .totalBox {
-  margin-top:175px;
+  margin-top:60px;
   padding: 0 15px;
 }
 .checkoutTitle {
@@ -1833,6 +1833,26 @@ label {
 .slideOne p {
   color:white;
   font-weight: 200;
+}
+.special {
+  position: absolute;
+  right: 0px;
+  color: #363636;
+  top: 0px;
+  font-family: 'Lora', serif;
+}
+.width100Special {
+  width: 100vw;
+}
+.checkoutContainer {
+  background: white;
+  overflow: scroll;
+  width: 320; 
+  height: 326px;
+}
+.checkoutContainer h2 {
+  font-size: 25px;
+  font-family: 'lora', serif;
 }
 @media screen and (max-width: 1400px) {
   .slideTwo img:first-child, .slideTwo img:nth-child(2) {

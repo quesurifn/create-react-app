@@ -65,7 +65,7 @@ export class StepTwo extends Component {
                         </div>
                       </div>
                       
-                    <button className='selectPlan'  onClick={this.stepThree.bind(this,  {"plan":"couples", "price": 44.35})} >Select This Plan</button>
+                    <button className='selectPlan'  onClick={this.stepThree.bind(this,  {"plan":"Couples Plan", "price": 44.35})} >Select This Plan</button>
                    </div>
                   <div className='planCard'>
                     <div className='bgCardTwo'></div>
@@ -89,7 +89,7 @@ export class StepTwo extends Component {
                           <span>Per Week</span>
                       </div>
                     </div>
-                    <button className='selectPlan' onClick={this.stepThree.bind(this, {"plan":"family", "price": 48.85})} >Select This Plan</button>
+                    <button className='selectPlan' onClick={this.stepThree.bind(this, {"plan":"Family Plan", "price": 48.85})} >Select This Plan</button>
                   </div>
                 </div>
               </Col>
