@@ -29,29 +29,52 @@ import slide2text from './images/slider2-text2.png'
 import slide2text3 from './images/slide2-text3.png'
 
 import {Row, Col} from 'react-materialize'
+import {addToCart} from './actions/action'
+import AlertContainer from 'react-alert'
 
-
-
-
+@connect((store) => {
+  return {
+    cart: store.reducer.cart
+  }
+})
 export class Home extends Component {
   constructor() {
     super() 
     this.startCheckout= this.startCheckout.bind(this);
+    this.addToCartComp = this.addToCartComp.bind(this)
+    
   }
    componentDidMount() {
-       console.log('fired')
-       window.scrollTop = 0;
+        var element = document.querySelector("html"); 
+      console.log(element)
+      element.style.overflowX = 'scroll'
+      window.scroll(0,0)
+      element.style.overflowX = 'hidden'
     }    
 
   startCheckout() {
     this.props.history.push('/stepone')
   }
 
+  addToCartComp(obj) {
+    this.props.dispatch(addToCart(obj))
+    this.msg.show(`Added ${obj.name} To Cart!`, {
+          time: 3000,
+          type: 'success',
+          offset: 14,
+          position: 'top left',
+          theme: 'dark',
+          transition: 'scale'
+    })
+    this.props.history.push('/checkout')
+  }
+  
+
   render() {
    
     return (
       <div className="App">
-        
+        <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
             <div className="gallery items-2">
                 <div id="antipasto" className="control-operator"></div>
                 <div id="real" className="control-operator"></div>
@@ -91,7 +114,7 @@ export class Home extends Component {
                 <img className="margin40 img-responsive responsive-img" src={food} alt="fine italian food" />
                   <div className="row margin40">
                   <div className="col-6 padright5">
-                    <div className="selectionButton right">
+                    <div className="selectionButton right" onClick={this.addToCartComp.bind(this, {"name":"Exotic Meat Reserve", "price": 36, q: 1})}>
                       <div className='row'>
                         <div className='col-9 flexLeft'>
                           <h5>2 Person Food Crate</h5>
@@ -108,7 +131,7 @@ export class Home extends Component {
                   </div>
 
                   <div className="col-6 padleft5">
-                    <div className="selectionButton left">
+                    <div className="selectionButton left" onClick={this.addToCartComp.bind(this, {"name":"Exotic Meat Reserve", "price": 79, q: 1})}>
                       <div className='row'>
                         <div className='col-9 flexLeft'>
                           <h5>6 Person Food Crate</h5>
@@ -126,7 +149,7 @@ export class Home extends Component {
                     <p className="center margin40 font18" >Order Before Friday and get it by the weekend</p>
                   </div>
                   <div className="col-md-12">
-                    <div className="greenButton center margin40"><img src={order} alt="order" className="ordernow" onClick={this.startCheckout}/></div>
+                    <div className="greenButton center margin40" onClick={this.startCheckout}><img src={order} alt="order" className="ordernow" /></div>
                   </div>
                   <div className="col-md-6 relative margin115">
                     <img className='woman rightPercent' src={woman} alt="Fresh Delivery Woman" />
@@ -143,7 +166,7 @@ export class Home extends Component {
                   <div className='col-md-6 paddingLeft offered flexCenter'>
 
                     <p>Order hyper authentic fine foods from all over the world.</p>
-                    <div className="greenButton"><img src={order} alt="order" className="ordernow"onClick={this.startCheckout} /></div>
+                    <div className="greenButton" onClick={this.startCheckout} ><img src={order} alt="order" className="ordernow"/></div>
                     <div className='row margin40'>
                       <div className='col-md-3 meatCont'>
                         <img className="meat" src={salami} alt="salami" />
@@ -184,7 +207,7 @@ export class Home extends Component {
 
                 <div className='row'>
                   <div className='col-md-12 bgToap plans'>
-                    <h2 className="center margin80 width40">Exotic Offerings From Premium Brands</h2>
+                    <h2 className="center margin80 width40 padding15">Exotic Offerings From Premium Brands</h2>
                     <div className='row margin80'>
                       <div className='col-md-6 bottom40mobile'>
 

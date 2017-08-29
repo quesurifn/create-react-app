@@ -59,7 +59,7 @@ export class StepOne extends Component {
 
       } else {
       
-         this.msg.show('Please double check your email, password and zipcode.', {
+        this.msg.show('Please double check your email, password and zipcode.', {
           time: 3000,
           type: 'error',
           offset: 14,
@@ -88,7 +88,7 @@ export class StepOne extends Component {
    
           <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
           
-          <div className="col-md-6 margin200">
+          <div className="col-md-6 margin200 mobileCenter">
               <img src={box}/> 
           </div>
           <div className="col-md-6 margin200">

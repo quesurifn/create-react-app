@@ -4,8 +4,8 @@ body {
   height: 100vh;
   
 }
-html {
-  overflow-x: hidden;
+.padding15 {
+  padding: 0 15px;
 }
 .ordernow {
   cursor: pointer !important;
@@ -1867,5 +1867,13 @@ label {
 @media screen and (max-width: 500px) {
   .bottom40mobile {
     margin-bottom:40px !important;
+  }
+  .margin200 {
+    margin-top: 0 !important;
+  }
+  .mobileCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

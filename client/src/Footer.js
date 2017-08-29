@@ -34,6 +34,7 @@ export class Foot extends Component {
           theme: 'dark',
           transition: 'scale'
     })
+    this.props.history.push('/checkout')
   }
   
 
