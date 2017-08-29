@@ -1767,6 +1767,21 @@ label {
   position: relative;
   top: 80px;
 }
+.slideOne {
+  background: url('./images/bg-photo.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.slideTwo {
+  background: url('./images/bg-photo2.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.item {
+  margin: 0 !important;
+}
 
 @media screen and (max-width:768px) {
   .planCardContainer {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './css/gallery.css'
 
 
 import {connect} from 'react-redux'
@@ -21,6 +22,14 @@ import left from './images/tileone.png'
 import right from './images/tile2.png'
 import meatbg from './images/meatbg.png'
 
+
+import heroLogo from './images/antipasto-box-logo.png'
+
+import {Row, Col} from 'react-materialize'
+
+
+
+
 export class Home extends Component {
   constructor() {
     super() 
@@ -32,41 +41,40 @@ export class Home extends Component {
   }
 
   render() {
-    var sectionStyle = {
-      width: "100%",
-      height: "450px",
-      backgroundImage: `url(${Background})`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      display: 'flex',
-      justifyContent: 'center',
-      alignContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column'
-    };
+   
     return (
       <div className="App">
+        <Row>
+          <Col s={12}>
+            <div className="gallery autoplay items-2">
+                <div id="item-1" className="control-operator"></div>
+                <div id="item-2" className="control-operator"></div>
+                <div id="item-3" className="control-operator"></div>
 
-         <Slider
-          loop={ true }
-          showNav={ false }
-          selected={ 0 }>
+                <figure className="item slideOne">
+                  <img src={heroLogo} alt='Hero Logo' />
+                </figure>
 
-
-
-          <div style={{ background: '#21BB9A' }}>
-             <div className="hero" style={sectionStyle} >
+                <figure className="item slideTwo">
                 
-              <h1>Food is better when you know where it comes from</h1>
-              <Button waves='light' onClick={this.startCheckout}>Shop Plans</Button>
-            </div>
-            
+                </figure>
 
-        </div>
+              
+
+                <div className="controls">
+                  <a href="#antipasto" className="control-button">•</a>
+                  <a href="#real-italian" className="control-button">•</a>
+                </div>
+              </div>
+          </Col>
+        </Row>
+      
+        
+
+
       
        
-        </Slider>
+  
         <div className="row">
               <div className="col-12 bgToap paddingBottom80">
         

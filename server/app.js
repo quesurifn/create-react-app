@@ -8,6 +8,7 @@ var compression = require('compression')
 var session = require('express-session');
 
 var index = require('./routes/index');
+var root = require('./routes/root')
 
 var app = express();
 
@@ -29,16 +30,8 @@ app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '../client/build')));
 
-
-
+app.use('/', root)
 app.use('/api', index);
-
-app.get('*', function(req, res) {
-  res.sendFile(__dirname, '../client/build/index.html');
-})
-
-//To prevent errors from Cross Origin Resource Sharing, we will set 
-//our headers to allow CORS with middleware like so:
 
 
 // catch 404 and forward to error handler
