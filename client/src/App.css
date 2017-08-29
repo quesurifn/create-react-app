@@ -1904,4 +1904,7 @@ label {
     justify-content: center;
     align-items: center;
   }
+  .slideOne {
+    padding:40px;
+  }
 }
