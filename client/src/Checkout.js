@@ -192,8 +192,9 @@ export class Checkout extends Component {
 
 		if (this.props.cart.length !== 0) {
 			items = this.props.cart.map(e =>{
-				return <li><li><p><b>{e.name}</b> <i>Feeds 6</i> <b>${e.price}</b>  #{e.q}</p></li></li>
+				return <li><p><b>{e.name}</b> <i>Feeds 6</i> <b>${e.price}</b>  #{e.q}</p></li>
 			})
+			console.log(items)
 		} else {
 			items = <p>No items selected today</p>
 		}
@@ -203,6 +204,11 @@ export class Checkout extends Component {
 		  console.log(e)
 	  }
 
+	  let total;
+	  if (this.props.cart.length !== 0 && this.props.planinfo != undefined && this.props.planinfo !== '') {
+		 let cartSum = this.props.cart.reduce((a, b) => a.price + b.price)
+		 console.log(cartSum)
+	  }
 
     return (
         <div className="App"> 

@@ -1849,6 +1849,10 @@ label {
   overflow: scroll;
   width: 320; 
   height: 326px;
+  padding: 0 20px;
+}
+.checkoutContainer ul li p {
+  text-align: left;
 }
 .checkoutContainer h2 {
   font-size: 25px;
