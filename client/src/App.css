@@ -1164,6 +1164,7 @@ footer * {
   margin: 20px auto;
   padding: 32px!important;
 }
+
 .inlineTitle {
   display: flex;
   align-items: center;
@@ -1959,6 +1960,10 @@ label {
     }
     .checkoutRow {
       margin: 20px 0 !important;
+    }
+    .last {
+      align-items: center !important;
+      padding-bottom: 7px !important;
     }
 }
 @media screen and (max-width:768px) {
