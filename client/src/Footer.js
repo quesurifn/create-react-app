@@ -47,17 +47,17 @@ export class Foot extends Component {
     return (
         <footer>
             <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
-            <h2 className='center footerHeader'>More Food Crates</h2>
+            <h2 className='center footerHeader'>Seasonal Food Crates</h2>
             <div className='moreCrates margin80'>
                  <div className="col-md-3 col-sm-12 LRMargin">
                     <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Olive Sampler", "price": 39, q: 1})}>
                       <div className='row'>
                         <div className='col-9 flexLeft'>
-                          <h5>2 Person Food Crate</h5>
-                          <p>Olive Sampler</p>
+                          <h5>Kosher Box</h5>
+                          <p>Certified Locally</p>
                         </div>
                         <div className='col-3 vert flexPrice'>
-                          <p className='gothicP'>$39</p>
+                          <p className='gothicP'>$149</p>
 
                         </div>
 
@@ -69,8 +69,8 @@ export class Foot extends Component {
                     <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Italian Cheese Collection", "price": 79, q: 1})}>
                       <div className='row'>
                         <div className='col-9 flexLeft'>
-                          <h5>6 Person Food Crate</h5>
-                          <p>Italian Cheese Collection</p>
+                          <h5>Organic Baby Food</h5>
+                          <p>All ages</p>
                         </div>
                         <div className='col-3 vert flexPrice'>
                           <p className='gothicP'>$79</p>
@@ -85,11 +85,11 @@ export class Foot extends Component {
                     <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Pepper Mixer", "price": 39, q: 1})}>
                       <div className='row'>
                         <div className='col-9 flexLeft'>
-                          <h5>2 Person Food Crate</h5>
-                          <p>Pepper Mixer</p>
+                          <h5>Thanksgiving Crate</h5>
+                          <p>Feeds family of 5 </p>
                         </div>
                         <div className='col-3 vert flexPrice'>
-                          <p className='gothicP'>$39</p>
+                          <p className='gothicP'>$179</p>
 
                         </div>
 
@@ -118,9 +118,7 @@ export class Foot extends Component {
                         <li><p>Jobs</p></li>
                         <li><p>Blog</p></li>
                         <li><p>Press</p></li> 
-                        <li><p>Investor Relations</p></li>
-                        <li><p>Management Team</p></li>
-                        <li><p>In Your Community</p></li>
+
                     </ul>
                     </div>
        
@@ -131,7 +129,7 @@ export class Foot extends Component {
                         <li><p>Run a Groupon Deal</p></li>
                         <li><p>Learn About Groupon Merchant</p></li>
                         <li><p>Affiliate Program</p></li> 
-                        <li><p>Vendor Code of Conduct</p></li>
+                      
                     </ul>
                 </div>
                 <div className="col-md-3">
@@ -141,9 +139,7 @@ export class Foot extends Component {
                         <li><p>Refund Policies</p></li>
                         <li><p>FAQ</p></li>
                         <li><p>Coupons</p></li> 
-                        <li><p>Gift Cards</p></li>
-                        <li><p>Gift Shop</p></li>
-                        <li><p>Students</p></li>
+            
                     </ul>
                 </div>
                 <div className="col-md-3">
@@ -156,15 +152,7 @@ export class Foot extends Component {
             
 
                 </div>
-                <p>Incredible Deals on Local Experiences</p>
-                <small>Discover fun activities and huge discounts in your city with Groupon. Check out great deals on things to do from kids activities to nightlife; try out new restaurants, spas, massages and hair salons near you, or plan a trip away from home.</small>
-                <div className="flexCont2">
-                    <p>2017 &copy; Food Crates Inc. All Rights Reserved.</p>
-                    <a>Terms Of Use</a>
-                    <a>Privacy Statement</a>
-                    <a>Licenses</a> 
-                    <a>Responsible Disclosure</a>
-                </div>
+                
             </div>
         </div>
         </footer>

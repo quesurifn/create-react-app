@@ -281,9 +281,9 @@ body {
   .offered {
     padding: 0 !important;
   }
-  .offered p {
+  .offered p:first-child {
     text-align: center !important;
-    font-size: 25px !important;
+    font-size: 45px !important;
     padding: 0 15px;
   }
   .offered .greenButton, .offered .meat {
@@ -570,10 +570,15 @@ background: white;
 .meat {
   height:100px;
 }
-.offered p {
+.offered p:first-child {
   text-align: left;
-  font-size:35px;
+  font-size:40px;
   font-family: 'Lora', serif;
+}
+.offered p:nth-child(2) {
+  text-align: left;
+  font-size: 30px;
+  font-family: 'lora', serif;
 }
 .margin115 {
   margin-top:115px !important;
@@ -1891,6 +1896,28 @@ label {
   .special {
     display: none;
   }
+    .bottom40mobile {
+    margin-bottom:40px !important;
+  }
+  .margin200 {
+    margin-top: 0 !important;
+  }
+  .mobileCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slideOne {
+    padding:40px;
+  }
+  .offered p:first-child {
+    text-align: left;
+    font-size: 25px !important; 
+  }
+  .offered p:nth-child(2){
+    text-align: center !important;
+    font-size: 20px !important; 
+  }
 }
 @media screen and (max-width:768px) {
   .planCardContainer {
@@ -1918,20 +1945,8 @@ label {
     padding-top: 7px;
     align-items: initial;
   }
-}
-@media screen and (max-width: 500px) {
-  .bottom40mobile {
-    margin-bottom:40px !important;
-  }
-  .margin200 {
-    margin-top: 0 !important;
-  }
-  .mobileCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .slideOne {
-    padding:40px;
+  .special {
+    display: none;
   }
 }
+

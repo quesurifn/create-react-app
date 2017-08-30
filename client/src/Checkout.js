@@ -226,7 +226,7 @@ export class Checkout extends Component {
 								</div>
 								<hr />
 
-								<h3 className='shippingTitle'>Shipping Address</h3>
+								<h3 className='shippingTitle'>Billing Address</h3>
 								<div className='form-inline'>
 									<div className="form-container"> 
 										<input ref='first' id='first' className="form-text" type="text" placeholder="First Name" required />

@@ -63,14 +63,13 @@ export class Home extends Component {
   addToCartComp(obj) {
     this.props.dispatch(addToCart(obj))
     this.msg.show(`Added ${obj.name} To Cart!`, {
-          time: 3000,
-          type: 'success',
-          offset: 14,
-          position: 'top left',
-          theme: 'dark',
-          transition: 'scale'
+      time: 3000,
+      type: 'success',
+      offset: 14,
+      position: 'top left',
+      theme: 'dark',
+      transition: 'scale'
     })
-
   }
   
 
@@ -173,7 +172,7 @@ export class Home extends Component {
                   <div className='col-md-6 paddingLeft offered flexCenter'>
 
                     <p>Order hyper authentic fine foods from all over the world.</p>
-                    <div className="greenButton" onClick={this.startCheckout} ><img src={order} alt="order" className="ordernow"/></div>
+                    <p>Deliver Right To Your Door Stop</p>
                     <div className='row margin40'>
                       <div className='col-md-3 meatCont'>
                         <img className="meat" src={salami} alt="salami" />
@@ -187,10 +186,7 @@ export class Home extends Component {
                       <div className='col-md-3 meatCont'>
                         <img className="meat" src={padano} alt='padano' />
                       </div>
-                      <div className='col-md-3 meatCont'>
-                        <img className="meat" src={sanmarzano} alt='sanmarzano' />
-                      </div>
-
+                     
                     </div>
 
 
@@ -206,7 +202,7 @@ export class Home extends Component {
           </div>
            
 
-                <div className="row">
+                <div className="row" onClick={this.startCheckout} style={{cursor: "pointer"}}>
                   <div className='col-12'>
                     <img className="onehundred" src={meatbg} alt='meatbg' />
                   </div>
@@ -215,6 +211,7 @@ export class Home extends Component {
                 <div className='row'>
                   <div className='col-md-12 bgToap plans'>
                     <h2 className="center margin80 width40 padding15">Exotic Offerings From Premium Brands</h2>
+                    
                     <div className='row margin80'>
                       <div className='col-md-6 bottom40mobile'>
 
