@@ -13,7 +13,7 @@ body {
 .vert.flexPrice {
     position: relative;
     bottom: 1px;
-  }
+}
 
 .navbar-fixed nav {
   width:100vw;
@@ -646,7 +646,7 @@ footer {
   margin-top:100px !important;
 }
 footer ul li p, footer p{
-  text-align: left;
+  text-align: center;
 }
 footer ul li p {
   font-size: 12px;
@@ -1154,13 +1154,13 @@ footer * {
   color:#363636;
 }
 .toapColor {
-  background: white;
+  background: #F6EEE1;
   padding: 80px 0;
 }
 .checkoutCard {
   height: 760px !important;
   width: 390px !important;
-  background: #F6EEE1;
+  background: white;
   margin: auto;
   padding: 32px!important;
 }
@@ -1173,7 +1173,7 @@ footer * {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: #5cbe53;
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -1182,6 +1182,7 @@ footer * {
 }
 .checkoutBadge span {
   font-size: 30px;
+  color: white;
 }
 .inlineTitle span {
   font-family: 'Lora', serif;
@@ -1850,7 +1851,7 @@ label {
   width: 100vw;
 }
 .checkoutContainer {
-  background: white;
+  background: #F6EEE1;
   overflow: scroll;
   width: 320; 
   height: 326px;
@@ -1863,6 +1864,35 @@ label {
   font-size: 25px;
   font-family: 'lora', serif;
 }
+.buy h1 {
+    margin-bottom: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+}
+  .buy h2 {
+        display: block;
+    margin-top: 10px;
+    font-weight: 300;
+    color: #777;
+  }
+  .buy h3 {
+    font-size: 3em;
+    line-height: 1em;
+    margin: 2rem 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #333;
+  }
+  .buy p {
+    
+  }
+  .checkoutRow {
+    max-width: 80%; 
+    margin: auto !important;
+  }
 @media screen and (max-width: 1400px) {
   .slideTwo img:first-child, .slideTwo img:nth-child(2) {
     width: 35% !important;

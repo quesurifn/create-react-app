@@ -111,7 +111,7 @@ export class Foot extends Component {
         
             <div className="container"> 
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-4">
                     <p>Company</p>
                     <ul>
                         <li><p>About Food Crates</p></li>
@@ -122,7 +122,7 @@ export class Foot extends Component {
                     </ul>
                     </div>
        
-                 <div className="col-md-3">
+                 <div className="col-md-4">
                     <p>Work With Food Crates</p>
                     <ul>
                         <li><p>Join The Food Crates Marketplace</p></li>
@@ -132,7 +132,7 @@ export class Foot extends Component {
                       
                     </ul>
                 </div>
-                <div className="col-md-3">
+                <div className="col-md-4">
                     <p>More</p>
                     <ul>
                         <li><p>Customer Support</p></li>
@@ -142,16 +142,7 @@ export class Foot extends Component {
             
                     </ul>
                 </div>
-                <div className="col-md-3">
-                    <p>Follow Us</p>
-                    <div className="flexCont">
-                        <div className="grayBox"><i className="fa fa-facebook dark" aria-hidden="true"></i></div>
-                        <div className="grayBox"><i className="fa fa-twitter dark" aria-hidden="true"></i></div>
-                    </div>
-                       
-            
-
-                </div>
+               
                 
             </div>
         </div>

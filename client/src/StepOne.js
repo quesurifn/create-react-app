@@ -6,10 +6,12 @@ import {connect} from 'react-redux'
 import {setFaceBookToken, userInfo} from './actions/action'
 import AlertContainer from 'react-alert'
 
-
+import {Row, Col} from 'react-materialize'
 
 import {Button} from 'react-materialize'
 import box from './images/boxoffood.png'
+
+import meatplatter from './images/meatplatter.jpg'
 
 @connect((store) => {
   return {
@@ -81,41 +83,20 @@ export class StepOne extends Component {
    
     
     return (
-      <div className="container">
-         <h1 className="stepOneTitle">Create an Account</h1>
-        <div className="row">
-         
-   
-          <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
-          
-          <div className="col-md-6 margin200">
-              <img src={box}/> 
-          </div>
-          <div className="col-md-6 margin200">
 
-            <input ref="loginEmail" type="email" placeholder="email@yourdomain.com" onChange={(e) => this.isItValid(e)} required/>
-            <input ref="loginPassword" type="password" placeholder="Password" onChange={(e) => this.isItValid(e)} required/> 
-            <input ref="zipcode" type="text" pattern="[0-9]{5}" placeholder="ex. 60010" onChange={(e) => this.isItValid(e)} required/>
-            
+      <Row>
+        <Col s={12} m={12}>
+          <Row> 
+            <Col s={6} m={6}>
+              <img src={meatplatter} alt='Exotic Meats' />
+            </Col>
 
-            <Button waves='light' className="width100" onClick={this.stepTwo} >Continue</Button>
-            <hr />
-              
-
-                  <FacebookProvider appId="269243040241559">
-                    <Login
-                      scope="email"
-                      onResponse={responseFacebook}
-                      onError={(e) => console.log(e) }
-                    >
-                      <span className="facebookButton">Login via Facebook</span>
-                    </Login>
-                  </FacebookProvider>
-               
-                </div>
-      
-          </div>
-        </div>
+            <Col s={6} m={6} className='buy'>
+              <h1></h1>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
     );
   }
 }

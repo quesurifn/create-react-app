@@ -206,7 +206,7 @@ export class Checkout extends Component {
 			
 			<div className="toapColor">
 				<h1 className='checkoutTitle'>Checkout</h1>
-				<Row >
+				<Row  className='checkoutRow'>
 					
 					<Col s={12} m={3}>
 

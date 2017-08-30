@@ -215,13 +215,13 @@ export class Home extends Component {
                     <div className='row margin80'>
                       <div className='col-md-6 bottom40mobile'>
 
-                        <img src={left} className='responsive-img width70 right' alt ='left' /> 
+                        <img src={left} className='responsive-img  right' alt ='left' /> 
 
 
                       </div>
                       <div className='col-md-6'>
 
-                        <img src={right}  className='responsive-img width70' alt ='left' /> 
+                        <img src={right}  className='responsive-img' alt ='left' /> 
 
                         
                       </div>
