@@ -32,11 +32,14 @@ export class Checkout extends Component {
   }
 
   componentDidMount() {
-	  var element = document.querySelector("html"); 
-      console.log(element)
+	  var element = document.querySelector("html");
+	  var body = document.querySelector('body')
+	  console.log(element)
+	  body.style.overflowX = 'initial'
       element.style.overflowX = 'scroll'
       window.scroll(0,0)
 	  element.style.overflowX = 'hidden'
+	  body.style.overflowX = 'hidden'
   }
 
   hideAlert() {
