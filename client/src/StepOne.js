@@ -35,8 +35,6 @@ export class StepOne extends Component {
       window.scroll(0,0)
       element.style.overflowX = 'hidden'
 
-          var nav = document.querySelector(".navbar-fixed"); 
-      nav.style.display = 'none'
 
     }    
 

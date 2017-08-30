@@ -1894,9 +1894,7 @@ label {
   video {
     padding-bottom: 180px;
   }
-  .fa {
-    color: #333 !important;
-  }
+  
 @media screen and (max-width: 1400px) {
   .slideTwo img:first-child, .slideTwo img:nth-child(2) {
     width: 35% !important;

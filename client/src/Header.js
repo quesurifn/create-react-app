@@ -30,7 +30,7 @@ export class Header extends Component {
        
         
     } else if (document.location.pathname === '/checkout') {
-        header = <div className="flex"><div className="badge"><i className="fa fa-check" aria-hidden="true"></i></div><span>Welcome</span> <div className="line"></div><div className="badgeNoFill"> 2 </div><span>Shop</span><div className="line"></div><div className="badgeNoFill"><i className="fa fa-check" aria-hidden="true"></i></div><span>Checkout</span></div>
+        header = <div className="flex"><div className="badge"><i className="fa fa-check" aria-hidden="true"></i></div><span>Welcome</span> <div className="line"></div><div className="badge"><i className="fa fa-check" aria-hidden="true"></i> </div><span>Shop</span><div className="line"></div><div className="badge">3</div><span>Checkout</span></div>
     } else {
         header = <p>Try Food Crates New Antipasto Box Today and Save $20</p>
     }
