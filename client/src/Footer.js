@@ -50,7 +50,7 @@ export class Foot extends Component {
             <h2 className='center footerHeader'>Seasonal Food Crates</h2>
             <div className='moreCrates margin80'>
                  <div className="col-md-3 col-sm-12 LRMargin">
-                    <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Olive Sampler", "price": 39, q: 1})}>
+                    <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Kosher Box", "price": 149, q: 1})}>
                       <div className='row'>
                         <div className='col-9 flexLeft'>
                           <h5>Kosher Box</h5>
@@ -66,7 +66,7 @@ export class Foot extends Component {
 
                   </div>
                    <div className="col-md-3 col-sm-12 LRMargin">
-                    <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Italian Cheese Collection", "price": 79, q: 1})}>
+                    <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Organic Baby Food", "price": 79, q: 1})}>
                       <div className='row'>
                         <div className='col-9 flexLeft'>
                           <h5>Organic Baby Food</h5>
@@ -82,7 +82,7 @@ export class Foot extends Component {
 
                   </div>
                    <div className="col-md-3 col-sm-12 LRMargin">
-                    <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Pepper Mixer", "price": 39, q: 1})}>
+                    <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Thanksgiving Crate", "price": 39, q: 1})}>
                       <div className='row'>
                         <div className='col-9 flexLeft'>
                           <h5>Thanksgiving Crate</h5>
