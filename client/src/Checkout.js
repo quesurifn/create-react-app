@@ -208,7 +208,7 @@ export class Checkout extends Component {
 				<h1 className='checkoutTitle'>Checkout</h1>
 				<Row  className='checkoutRow'>
 					
-					<Col s={12} m={3}>
+					<Col s={12} m={12} l={3}>
 
 						<div className='checkoutCard one'>
 							<div className='inlineTitle'>
@@ -310,7 +310,7 @@ export class Checkout extends Component {
 					</Col>
 
 
-					<Col s={12} m={3}>
+					<Col s={12} m={12}  l={3} >
 						<div className='checkoutCard two'>
 							<div className="alert" ref='alert'>
 								<span className="closebtn" onClick={this.hideAlert}>&times;</span> 
@@ -379,7 +379,7 @@ export class Checkout extends Component {
 					</Col>
 
 
-					<Col s={12} m={3}>
+					<Col s={12} m={12} l={3} >
 						<div className='checkoutCard three'>
 							<div className='inlineTitle'>
 								<div className='checkoutBadge'>

@@ -1161,7 +1161,7 @@ footer * {
   height: 760px !important;
   width: 390px !important;
   background: white;
-  margin: auto;
+  margin: 20px auto;
   padding: 32px!important;
 }
 .inlineTitle {
@@ -1956,6 +1956,9 @@ label {
     .sliderThree img:last-child {
       width: 100%;
       margin-top:40px;
+    }
+    .checkoutRow {
+      margin: 20px 0 !important;
     }
 }
 @media screen and (max-width:768px) {
