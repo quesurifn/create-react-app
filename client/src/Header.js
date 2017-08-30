@@ -24,7 +24,7 @@ export class Header extends Component {
   render() {
     let header = null; 
     if (document.location.pathname === '/stepone') {
-        header =  <div className="flex"><div className="badge"><i className="fa fa-check" aria-hidden="true"></i></div><span>Welcome</span> <div className="line"></div><div className="badgeNoFill"> 2 </div><span>Shop</span><div className="line"></div><div className="badgeNoFill"> 2 </div><span>Checkout</span></div>
+        header =  <div className="flex"><div className="badge"><i className="fa fa-check" aria-hidden="true"></i></div><span>Welcome</span> <div className="line"></div><div className="badgeNoFill"> 2 </div><span>Shop</span><div className="line"></div><div className="badgeNoFill"> 3 </div><span>Checkout</span></div>
     } else if (document.location.pathname === '/steptwo') {
         header = <div className="flex"><div className="badge"><i className="fa fa-check" aria-hidden="true"></i></div><span>Welcome</span> <div className="line"></div><div className="badge"><i className="fa fa-check" aria-hidden="true"></i></div><span>Shop</span><div className="line"></div><div className="badgeNoFill">3</div><span>Checkout</span></div>
        
