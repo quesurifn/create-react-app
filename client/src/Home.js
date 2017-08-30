@@ -38,6 +38,7 @@ import foodCratesLogo from './images/food-crates-logo.png'
 import {Row, Col} from 'react-materialize'
 import {addToCart} from './actions/action'
 import AlertContainer from 'react-alert'
+import videoposter from './images/videoposter.png'
 
 @connect((store) => {
   return {
@@ -226,7 +227,7 @@ export class Home extends Component {
 
                 <div className="row"  style={{cursor: "pointer"}}>
                   <div className='col-12'>
-                    <video poster={meatbg} className="onehundred" ref='video' onClick={this.playvideo}>
+                    <video poster={videoposter} className="onehundred" ref='video' onClick={this.playvideo}>
                       <source src='https://s3-us-west-2.amazonaws.com/foodcrates/bg.mp4' alt='face' />
                     </video>
                   </div>

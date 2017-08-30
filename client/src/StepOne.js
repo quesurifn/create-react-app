@@ -15,6 +15,8 @@ import box from './images/boxoffood.png'
 import buy1 from './images/buy1.png'
 import buy2 from './images/buytwo.png'
 
+import logo from './images/food-crates-logo.png'
+
 
 @connect((store) => {
   return {
@@ -63,9 +65,10 @@ export class StepOne extends Component {
 
       <Row>
         <Col s={12} m={12}>
-          <Row className='buy' onClick={this.stepTwo}> 
-            <img src={buy1} alt='buy one' />
-            <img src={buy2} alt='buy two' />
+          <Row className='buy' onClick={this.stepTwo}>
+  
+            <img src={buy1} style={{cursor: 'pointer'}} alt='buy one' />
+            <img src={buy2} style={{cursor: 'pointer'}} alt='buy two' />
           </Row>
         </Col>
       </Row>

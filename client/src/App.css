@@ -1864,10 +1864,10 @@ label {
   font-size: 25px;
   font-family: 'lora', serif;
 }
-.buy img {
+.buy img:nth-child(1), .buy img:last-child {
     max-width: 100%;
-    width:100%;
-    height: 120vh;
+    text-align: center;
+    margin: auto;
 }
   .sliderThree {
     background: url('./images/slider3-bg.png') !important;
