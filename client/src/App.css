@@ -1911,7 +1911,7 @@ label {
     padding:40px;
   }
   .offered p:first-child {
-    text-align: left;
+    text-align: center;
     font-size: 25px !important; 
   }
   .offered p:nth-child(2){
