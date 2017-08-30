@@ -45,14 +45,8 @@ export class StepTwo extends Component {
                 <div className='planCardContainer'> 
                   <div className='planCard'>
                     <div className='bgCardOne'></div>
-                    <h1>Couple's Plan</h1>
+                    <h1>Antipasto Crate</h1>
                     <h2>Serves 2 People</h2>
-                    <div className='planPortionContainer'>
-                      <div className='servings'>
-                        <span>5</span>
-                      </div>
-                      <span className='recipes'>Recipes Per Week</span>
-                      </div>
                       <div className='mathbox'>
                         <div className='left'>
                           <h3>$8.87</h3>
@@ -61,23 +55,17 @@ export class StepTwo extends Component {
                         </div>
                         <div className='right'>
                           <h3>$44.35</h3>
-                          <span>Per Week</span>
+                          <span>Per Crate</span>
                         </div>
                       </div>
                       
-                    <button className='selectPlan'  onClick={this.stepThree.bind(this,  {"plan":"Couples Plan", "price": 44.35})} >Select This Plan</button>
+                    <button className='selectPlan'  onClick={this.stepThree.bind(this,  {"plan":"Couples Plan", "price": 44.35})} >Choose This Crate</button>
                    </div>
                   <div className='planCard'>
                     <div className='bgCardTwo'></div>
-                    <h1>Family Plan</h1>
-                    <h2>Serves 4 - 6 people</h2>
-                    <div className='planPortionContainer'>
-                      <div className='servings'>
-                        <span>5</span>
-                        
-                      </div>
-                      <span className='recipes'>Recipes Per Week</span>
-                    </div>
+                    <h1>Antipasto Catering</h1>
+                    <h2>Serves 12 - 120 people</h2>
+                   
                     <div className='mathbox'>
                       <div className='left'>
                          <h3>$9.77</h3>
@@ -86,10 +74,10 @@ export class StepTwo extends Component {
                       </div>
                       <div className='right'>
                         <h3>$48.85</h3>
-                          <span>Per Week</span>
+                          <span>Per Crate</span>
                       </div>
                     </div>
-                    <button className='selectPlan' onClick={this.stepThree.bind(this, {"plan":"Family Plan", "price": 48.85})} >Select This Plan</button>
+                    <button className='selectPlan' onClick={this.stepThree.bind(this, {"plan":"Family Plan", "price": 48.85})} >Choose This Crate</button>
                   </div>
                 </div>
               </Col>

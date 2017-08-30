@@ -47,7 +47,7 @@ export class Foot extends Component {
     return (
         <footer>
             <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
-            <h2 className='center footerHeader'>Seasonal Food Crates</h2>
+            <h2 className='center footerHeader'>Healthy Food Crates</h2>
             <div className='moreCrates margin80'>
                  <div className="col-md-3 col-sm-12 LRMargin">
                     <div className="selectionButton right width100" onClick={this.addToCartComp.bind(this, {"name":"Kosher Box", "price": 149, q: 1})}>
