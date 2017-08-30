@@ -1888,6 +1888,9 @@ label {
   .slideTwo img:last-child {
     width: 60%;
   }
+  .special {
+    display: none;
+  }
 }
 @media screen and (max-width:768px) {
   .planCardContainer {

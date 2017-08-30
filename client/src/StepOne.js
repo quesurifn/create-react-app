@@ -88,7 +88,7 @@ export class StepOne extends Component {
    
           <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
           
-          <div className="col-md-6 margin200 mobileCenter">
+          <div className="col-md-6 margin200">
               <img src={box}/> 
           </div>
           <div className="col-md-6 margin200">

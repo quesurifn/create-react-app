@@ -21,7 +21,6 @@ export class Checkout extends Component {
     super() 
 
 	this.checkout= this.checkout.bind(this);
-	this.computeTax= this.computeTax.bind(this);
 	this.hideAlert = this.hideAlert.bind(this);
 	this.state = {
 		billing: false,
@@ -40,24 +39,6 @@ export class Checkout extends Component {
 	  element.style.overflowX = 'hidden'
   }
 
-  computeTax() {
-	  if (this.refs.state.value === 'IL') {
-		  if(this.props.planinfo.price !== undefined) {
-
-				console.log(this.props.planinfo.price)
-				let tax = parseFloat((this.props.planinfo.price * 0.0625).toFixed(2))
-				console.log(tax)
-				let total = this.state.total.replace('$', '')
-				total = parseFloat(total) + tax
-				total = total.toFixed(2)
-				this.setState({taxAmount: '$'+tax, total: '$'+total} )
-		  } else {
-				this.refs.message.innerHTML = 'Please add something to your cart.'
-				this.refs.alert.style.display = 'block';
-		  }
-
-	  } 
-  }
   hideAlert() {
 	  this.refs.alert.style.display ='none'
   }
@@ -192,7 +173,7 @@ export class Checkout extends Component {
 
 		if (this.props.cart.length !== 0) {
 			items = this.props.cart.map(e =>{
-				return <li><p><b>{e.name}</b> <i>Feeds 6</i> <b>${e.price}</b>  #{e.q}</p></li>
+				return <li key={e}><p><b>{e.name}</b> <i>Feeds 6</i> <b>${e.price}</b>  #{e.q}</p></li>
 			})
 			console.log(items)
 		} else {
@@ -205,10 +186,17 @@ export class Checkout extends Component {
 	  }
 
 	  let total;
-	  if (this.props.cart.length !== 0 && this.props.planinfo != undefined && this.props.planinfo !== '') {
-		 let cartSum = this.props.cart.reduce((a, b) => a.price + b.price)
-		 console.log(cartSum)
+	  if (this.props.cart.length !== 0) {
+	 			total = this.props.cart.reduce(function (total, item) {
+							return total + item.q * item.price;
+						}, 0).toFixed(2);
+
+				console.log(total)
+	  } else {
+		  total = '0.00'
 	  }
+
+	
 
     return (
         <div className="App"> 
@@ -312,13 +300,7 @@ export class Checkout extends Component {
 								<div className="form-container"> 
 									<input ref='zip' id='zip' className="form-text" type="text" placeholder="Zip Code" pattern='[0-9]{5}' required />
 								</div>
-								<div className='billingCheckbox'>
-									<label>
-										<input type='checkbox' />
-										Is your billing address different?
-									</label>
-									
-								</div>
+								
 							</form>
 
 						</div>
@@ -431,7 +413,7 @@ export class Checkout extends Component {
 											<div className='totals'>
 												<div className='shipping'>Included</div>
 												<div className='tax'>{this.state.taxAmount}</div>
-												<div className='total'>{this.state.total}</div>
+												<div className='total'>${total}</div>
 											</div>
 											
 								
