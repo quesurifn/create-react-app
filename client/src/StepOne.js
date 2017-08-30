@@ -94,7 +94,7 @@ export class StepOne extends Component {
           <div className="col-md-6 margin200">
 
             <input ref="loginEmail" type="email" placeholder="email@yourdomain.com" onChange={(e) => this.isItValid(e)} required/>
-            <input ref="loginPassword" type="password" placeholder="Uppercase, Lowercase. 8 or more characters" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" onChange={(e) => this.isItValid(e)} required/> 
+            <input ref="loginPassword" type="password" placeholder="Password" onChange={(e) => this.isItValid(e)} required/> 
             <input ref="zipcode" type="text" pattern="[0-9]{5}" placeholder="ex. 60010" onChange={(e) => this.isItValid(e)} required/>
             
 
@@ -108,7 +108,7 @@ export class StepOne extends Component {
                       onResponse={responseFacebook}
                       onError={(e) => console.log(e) }
                     >
-                      <span className="facebookButton"  >Login via Facebook</span>
+                      <span className="facebookButton">Login via Facebook</span>
                     </Login>
                   </FacebookProvider>
                
