@@ -49,6 +49,7 @@ export class Home extends Component {
     super() 
     this.startCheckout= this.startCheckout.bind(this);
     this.addToCartComp = this.addToCartComp.bind(this)
+    this.playvideo = this.playvideo.bind(this)
     
   }
    componentDidMount() {
@@ -74,6 +75,17 @@ export class Home extends Component {
       transition: 'scale'
     })
   }
+
+
+    playvideo() {
+        const video = this.refs.video;
+
+        if (video.paused) {
+            video.play()
+        } else {
+            video.pause()
+        }
+    }
   
 
   render() {
@@ -214,7 +226,8 @@ export class Home extends Component {
 
                 <div className="row"  style={{cursor: "pointer"}}>
                   <div className='col-12'>
-                    <video poster={meatbg} className="onehundred">
+                    <video poster={meatbg} className="onehundred" ref='video' onClick={this.playvideo}>
+                      <source src='https://s3-us-west-2.amazonaws.com/foodcrates/bg.mp4' alt='face' />
                     </video>
                   </div>
                 </div>
