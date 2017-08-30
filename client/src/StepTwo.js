@@ -3,11 +3,12 @@ import './App.css';
 import {connect} from 'react-redux'
 
 import {Button, Row, Col, Container} from 'react-materialize'
-import {planInfo} from './actions/action'
+import {planInfo, addToCart} from './actions/action'
 
 @connect((store) => {
   return {
-    planinfo: store.reducer.planinfo
+    planinfo: store.reducer.planinfo,
+    cart: store.reducer.cart
   }
 })
 export class StepTwo extends Component {
@@ -17,7 +18,7 @@ export class StepTwo extends Component {
   }
   stepThree(plan) {
     console.log(plan)
-    this.props.dispatch(planInfo(plan))
+    this.props.dispatch(addToCart(plan))
     this.props.history.push('/checkout')
   }
    componentDidMount() {
@@ -26,6 +27,8 @@ export class StepTwo extends Component {
       element.style.overflowX = 'scroll'
       window.scroll(0,0)
       element.style.overflowX = 'hidden'
+
+  
 
     }    
  
@@ -59,7 +62,7 @@ export class StepTwo extends Component {
                         </div>
                       </div>
                       
-                    <button className='selectPlan'  onClick={this.stepThree.bind(this,  {"plan":"Couples Plan", "price": 44.35})} >Choose This Crate</button>
+                    <button className='selectPlan'  onClick={this.stepThree.bind(this,  {"name":"Antipasto Crate", "price": 44.35, q: 1})} >Choose This Crate</button>
                    </div>
                   <div className='planCard'>
                     <div className='bgCardTwo'></div>
@@ -73,11 +76,11 @@ export class StepTwo extends Component {
                            <div></div>
                       </div>
                       <div className='right'>
-                        <h3>$48.85</h3>
+                        <h3>$189.85</h3>
                           <span>Per Crate</span>
                       </div>
                     </div>
-                    <button className='selectPlan' onClick={this.stepThree.bind(this, {"plan":"Family Plan", "price": 48.85})} >Choose This Crate</button>
+                    <button className='selectPlan' onClick={this.stepThree.bind(this, {"name":"Antipasto Catering", "price": 189.85})} >Choose This Crate</button>
                   </div>
                 </div>
               </Col>

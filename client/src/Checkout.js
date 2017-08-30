@@ -388,13 +388,7 @@ export class Checkout extends Component {
 								<span className='span2'>CONFIRM</span>
 							</div>
 							<div className='checkoutContainer'>
-								<h2>Plan Selection</h2>
-
-								
-									{plan}
-
-
-
+							
 								<h2>A la cart</h2>
 
 								<ul>

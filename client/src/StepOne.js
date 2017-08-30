@@ -11,7 +11,10 @@ import {Row, Col} from 'react-materialize'
 import {Button} from 'react-materialize'
 import box from './images/boxoffood.png'
 
-import meatplatter from './images/meatplatter.jpg'
+
+import buy1 from './images/buy1.png'
+import buy2 from './images/buytwo.png'
+
 
 @connect((store) => {
   return {
@@ -22,8 +25,7 @@ import meatplatter from './images/meatplatter.jpg'
 export class StepOne extends Component {
   constructor() {
     super() 
-    this.isItValid = this.isItValid.bind(this)
-    this.stepTwo = this.stepTwo.bind(this)
+ this.stepTwo = this.stepTwo.bind(this)
   }
 
   componentDidMount() {
@@ -33,43 +35,20 @@ export class StepOne extends Component {
       window.scroll(0,0)
       element.style.overflowX = 'hidden'
 
+          var nav = document.querySelector(".navbar-fixed"); 
+      nav.style.display = 'none'
+
     }    
 
     
 
-    isItValid(e) {
-      const el = e.target 
-      if(!el.checkValidity()) {
-        el.style.borderBottom = '2px solid red';
-      } else {
-        el.style.borderBottom = '2px solid green';
-      }
-    }
     
-    
-    stepTwo() {
-      if(this.refs.loginEmail.checkValidity() && this.refs.loginPassword.checkValidity() && this.refs.zipcode.checkValidity()) {
-       
-        let obj = {
-          email: this.refs.loginEmail.value,
-          password: this.refs.loginPassword.value,
-          zipcode: this.refs.zipcode.value
-        }
+    stepTwo(obj) {
+ 
 
         this.props.dispatch(userInfo(obj))
         this.props.history.push('/steptwo')
 
-      } else {
-      
-        this.msg.show('Please double check your email, password and zipcode.', {
-          time: 3000,
-          type: 'error',
-          offset: 14,
-          position: 'top left',
-          theme: 'dark',
-          transition: 'scale'
-        })
-      }
     }
 
    
@@ -86,14 +65,9 @@ export class StepOne extends Component {
 
       <Row>
         <Col s={12} m={12}>
-          <Row> 
-            <Col s={6} m={6}>
-              <img src={meatplatter} alt='Exotic Meats' />
-            </Col>
-
-            <Col s={6} m={6} className='buy'>
-              <h1></h1>
-            </Col>
+          <Row className='buy' onClick={this.stepTwo}> 
+            <img src={buy1} alt='buy one' />
+            <img src={buy2} alt='buy two' />
           </Row>
         </Col>
       </Row>

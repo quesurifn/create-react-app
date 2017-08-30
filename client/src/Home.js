@@ -23,6 +23,9 @@ import left from './images/tileone.png'
 import right from './images/tile2.png'
 import meatbg from './images/meatbg.png'
 
+import currybox from './images/curry-box-logo.png'
+import currylogo from './images/3-slider-label2.png'
+
 
 import heroLogo from './images/antipasto-box-logo.png'
 import hero2Logo from './images/slider2-text1.png'
@@ -78,9 +81,10 @@ export class Home extends Component {
     return (
       <div className="App">
         <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
-            <div className="gallery autoplay items-2">
+            <div className="gallery autoplay items-3">
                 <div id="antipasto" className="control-operator"></div>
                 <div id="real" className="control-operator"></div>
+                <div id="indian" className="control-operator"></div>
              
 
                 <figure className="item slideOne">
@@ -96,12 +100,18 @@ export class Home extends Component {
                   <img src={slide2text} alt='Hero 2 text 2' />
                   <img src={slide2text3} alt='Hero 2 text 3' />
                 </figure>
+                
+                <figure className="item sliderThree">
+                  <img src={currybox} alt='box logo' />
+                  <img src={currylogo} alt='curry logo' />
+                </figure>
 
               
 
                 <div className="controls">
                   <a href="#antipasto" className="control-button">•</a>
                   <a href="#real" className="control-button">•</a>
+                  <a href="#indian" className="control-button">•</a>
                 </div>
               </div>
        
@@ -172,7 +182,7 @@ export class Home extends Component {
                   <div className='col-md-6 paddingLeft offered flexCenter'>
 
                     <p>Order hyper authentic fine foods from all over the world.</p>
-                    <p>Deliver Right To Your Door Stop</p>
+                    <p>Delivered Right To Your Door Stop</p>
                     <div className='row margin40'>
                       <div className='col-md-3 meatCont'>
                         <img className="meat" src={salami} alt="salami" />
@@ -202,9 +212,10 @@ export class Home extends Component {
           </div>
            
 
-                <div className="row" onClick={this.startCheckout} style={{cursor: "pointer"}}>
+                <div className="row"  style={{cursor: "pointer"}}>
                   <div className='col-12'>
-                    <img className="onehundred" src={meatbg} alt='meatbg' />
+                    <video poster={meatbg} className="onehundred">
+                    </video>
                   </div>
                 </div>
 
