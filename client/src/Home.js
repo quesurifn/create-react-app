@@ -194,7 +194,7 @@ export class Home extends Component {
                   <div className='col-md-6 paddingLeft offered flexCenter'>
 
                     <p>Order hyper authentic fine foods from all over the world.</p>
-                    <p>Delivered Right To Your Door Stop</p>
+                    <p>Delivered Right To Your Door Step</p>
                     <div className='row margin40'>
                       <div className='col-md-3 meatCont'>
                         <img className="meat" src={salami} alt="salami" />
